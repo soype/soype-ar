@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" comment="Developed by Pedro Henestroza">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoyPe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+        <h3 class="loader-logo">Pedro <br> Henestroza</h3>
+    </div>
+    <main id="main" class="main">
+        <header class="header">
+            <h1 class="logo">
+              <a href="/">SoyPe</a>
+            </h1>
+            <nav class="navbar">
+              <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-2'))">Projects</p>
+              <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-3'))">About</p>
+              <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-4'))">Contact</p>
+            </nav>
+          </header>
+          <section id="section-1" class="section-1">
+            <div class="filter"></div>
+            <div class="intro">
+              <h2 class="intro__title">You just imagine</h2>
+              <p class="intro__desc">It'll be there</p>
+            </div>
+          </section>
+          <section id="section-2" class="section-2">
+            <div class="section-2__item project-1">
+              <div class="section-2__item-filter"></div>
+              <div class="item-text">
+                <h3>Indie Club Argentina</h3>
+                <p>Music magazine from Argentina. <br> Modified WordPress theme (Zakra), custom PHP, SCSS and JS.</p>
+              </div>
+            </div>
+            <div class="section-2__item project-2">
+              <div class="section-2__item-filter"></div>
+              <div class="item-text">
+                <h3>MEPEX</h3>
+                <p>Stands and expositions. <br> Web development. Custom WordPress theme from scratch.</p>
+              </div>
+            </div>
+            <div class="section-2__item project-3">
+              <div class="section-2__item-filter"></div>
+              <div class="item-text">
+                <h3>Valyser</h3>
+                <p>Heavy industry maintenance. <br> Web development. Custom WordPress theme from scratch.</p>
+              </div>
+            </div>
+            <div class="section-2__item project-4">
+              <div class="section-2__item-filter"></div>
+              <div class="item-text">
+                <h3>Dashboard</h3>
+                <p>Mock up dashboard done with ReactJS</p>
+              </div>
+            </div>
+          </section>
+          <section id="section-3" class="section-3">
+            <div class="about">
+              <div class="bio">
+                <h3>About me</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet maiores dolorem fugit non. Tenetur architecto, autem maxime corrupti doloribus magni, voluptate quas voluptatibus sapiente culpa natus harum blanditiis quia ex!</p>
+              </div>
+              <div class="skills"></div>
+            </div>
+          </section>
+          <section id="section-4" class="section-4">
+            <h3 class="contact">In touch</h3>
+            
+          </section>
+          <footer class="footer">
+            <div class="about"></div>
+            <div class="copyright"></div>
+          </footer>
+    </main>
+    <script>
+        const smoothScroll = (id) => {
+          id.scrollIntoView();
+        }
+        const loader = document.getElementById("loader");
+        const main = document.getElementById("main");
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 4000);
+      </script>
+  </body>
+</html>
