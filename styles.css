@@ -154,18 +154,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-.section-2__item:hover .section-2__item-filter {
-  background-color: rgba(181, 180, 180, 0.2);
-}
-
-.section-2__item-filter {
-  position: absolute;
-  height: 50vh;
-  width: 50vw;
-  z-index: 1;
-  transition: all 0.2s;
-  background-color: rgba(181, 180, 180, 0.1);
-}
 
 .item-text {
   z-index: 2;
@@ -338,6 +326,9 @@ a {
     left: 0;
     text-align: center;
   }
+  .loader-logo {
+    font-size: 24px !important;
+  }
   .header {
     padding: 0 1rem 0;
   }
@@ -351,9 +342,6 @@ a {
     height: 50vh;
     top: 0;
     left: 0;
-  }
-  .section-2__item-filter {
-    display: none;
   }
   .about {
     font-size: 2rem;
@@ -411,6 +399,10 @@ a {
   .intro__title {
     line-height: 4rem;
     line-height-step: 4rem;
+    font-size: 2.4rem;
+  }
+  .intro__desc {
+    font-size: 1.4rem;
   }
   .navbar__item {
     margin: 0 0.3rem 0;
