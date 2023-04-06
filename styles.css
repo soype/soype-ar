@@ -51,11 +51,10 @@ html {
     opacity: 0;
   }
 }
-.main {
+Main sin intro .main {
   overflow-x: hidden;
   display: block;
-  opacity: 0;
-  animation: appear 1s 4s forwards;
+  opacity: 1;
   font-family: Gobold;
 }
 

@@ -19,7 +19,8 @@
         <h1 class="logo">
           <a href="/">SoyPe</a>
         </h1>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
+          <p class="navbar__item" onclick="changeLanguage()">ESP</p>
           <p
             class="navbar__item"
             onclick="smoothScroll(document.getElementById('section-2'))"
@@ -43,8 +44,8 @@
       <section id="section-1" class="section-1">
         <div class="filter"></div>
         <div class="intro">
-          <h2 class="intro__title">You just imagine</h2>
-          <p class="intro__desc">It'll be there</p>
+          <h2 class="intro__title" id="intro__title">You just imagine</h2>
+          <p class="intro__desc" id="intro__desc">It'll be there</p>
         </div>
       </section>
 
@@ -57,7 +58,7 @@
             rel="noreferrer noopener"
           >
             <h3>MEPEX</h3>
-            <p>
+            <p id="project__1-text">
               Stands and expositions. <br />
               Web development. Custom WordPress theme from scratch.
             </p>
@@ -555,8 +556,8 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            <h3>Valyser</h3>
-            <p>
+            <h3 id="project__2-title">Valyser</h3>
+            <p id="project__2-text">
               Heavy industry maintenance. <br />
               Web development. Custom WordPress theme from scratch.
             </p>
@@ -570,7 +571,7 @@
             rel="noreferrer noopener"
           >
             <h3>Indie Club Argentina</h3>
-            <p>
+            <p id="project__3-text">
               Music magazine from Argentina. <br />
               Modified WordPress theme (Zakra), custom PHP, SCSS and JS.
             </p>
@@ -584,7 +585,7 @@
             rel="noreferrer noopener"
           >
             <h3>Dashboard</h3>
-            <p>Mock up dashboard done with ReactJS</p>
+            <p id="project__4-text">Mock up dashboard done with ReactJS<br/>Frontend only</p>
           </a>
           <img
             class="dashboard-dark"
@@ -595,15 +596,14 @@
       </section>
       <section id="section-3" class="section-3">
         <div class="bio">
-          <h3>About me</h3>
+          <h3 id="bio-title">About me</h3>
           <br>
-          <p>
+          <p id="bio-desc">
             I'm a front end engineer with a passion for fast-loading and dynamic
             websites.
-          </p>
           <br>
-          <p>
-            Through responsive and animated design, I believe a website can
+          <br>
+            Through responsive and animated design, I believe a boutique website can
             convey what you're all about and dazzle any potential customer.
           </p>
         </div>
@@ -726,7 +726,7 @@
         </div>
       </section>
       <section id="section-4" class="section-4">
-        <h3 class="contact">In touch</h3>
+        <h3 class="contact" id="contact-title">In touch</h3>
         <div class="mail">
           <a href="mailto:phenestroza@gmail.com">
             <img class="mail-light" src="./static/mail-light.png" alt="" height="100px">

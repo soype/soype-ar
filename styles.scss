@@ -54,20 +54,21 @@ html {
 }
 
 
-.main{
-    overflow-x: hidden;
-    display: block;
-    opacity: 0;
-    animation: appear 1s 4s forwards;
-font-family: Gobold;
-}
-
-// Main sin intro
 // .main{
 //     overflow-x: hidden;
 //     display: block;
-//     opacity: 1;
+//     opacity: 0;
+//     animation: appear 1s 4s forwards;
+// font-family: Gobold;
 // }
+
+Main sin intro
+.main{
+    overflow-x: hidden;
+    display: block;
+    opacity: 1;
+font-family: Gobold;
+}
 
 .header{
     position: absolute;
