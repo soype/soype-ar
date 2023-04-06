@@ -32,7 +32,8 @@ html {
   justify-content: center;
   align-items: center;
   animation: move-up-disappear 1s 3s forwards ease-in;
-  display: none !important;
+  font-family: Gobold;
+  text-transform: uppercase;
 }
 
 .loader-logo {
@@ -53,7 +54,9 @@ html {
 .main {
   overflow-x: hidden;
   display: block;
-  opacity: 1;
+  opacity: 0;
+  animation: appear 1s 4s forwards;
+  font-family: Gobold;
 }
 
 .header {
@@ -123,7 +126,7 @@ a {
   top: 45vh;
   text-align: right;
   line-height: 4rem;
-  animation: appear 1s 0.5s ease-in forwards;
+  animation: appear 1s 5s ease-in forwards;
   font-family: Gobold;
 }
 
@@ -345,7 +348,7 @@ svg .svg-text {
   width: 36rem;
   font-size: 14px;
   opacity: 0;
-  animation: appear 1s 1s forwards;
+  animation: appear 1s 5s forwards;
   background-color: rgb(23, 23, 23);
   font-family: Roboto;
   margin: 0 2rem 0;
@@ -405,27 +408,27 @@ svg .svg-text {
 }
 
 .text-1 {
-  animation: typing 4s 2s steps(100, end), appear 0.1s 2s forwards;
+  animation: typing 4s 6s steps(100, end), appear 0.1s 6s forwards;
 }
 
 .text-2 {
-  animation: typing 4s 3.5s steps(100, end), appear 0.1s 3.5s forwards;
-}
-
-.text-3 {
   animation: typing 4s 7.5s steps(100, end), appear 0.1s 7.5s forwards;
 }
 
-.text-4 {
+.text-3 {
   animation: typing 4s 11.5s steps(100, end), appear 0.1s 11.5s forwards;
 }
 
+.text-4 {
+  animation: typing 4s 15.5s steps(100, end), appear 0.1s 15.5s forwards;
+}
+
 .text-5 {
-  animation: typing 4s 14s steps(100, end), appear 0.1s 14s forwards;
+  animation: typing 4s 18s steps(100, end), appear 0.1s 18s forwards;
 }
 
 .text-6 {
-  animation: typing 4s 15s steps(100, end), appear 0.1s 15s forwards;
+  animation: typing 4s 19s steps(100, end), appear 0.1s 19s forwards;
 }
 
 /* The typing effect */
@@ -478,28 +481,28 @@ svg .svg-text {
   opacity: 0;
 }
 .terminal-content-mobile .text-1 {
-  animation: typing 3s 2s steps(100, end), appear 0.1s 2s forwards;
+  animation: typing 3s 5s steps(100, end), appear 0.1s 5s forwards;
 }
 .terminal-content-mobile .text-2 {
-  animation: typing 3s 3.5s steps(100, end), appear 0.1s 3.5s forwards;
+  animation: typing 3s 6.5s steps(100, end), appear 0.1s 6.5s forwards;
 }
 .terminal-content-mobile .text-3 {
-  animation: typing 3s 5.5s steps(100, end), appear 0.1s 5.5s forwards;
-}
-.terminal-content-mobile .text-4 {
   animation: typing 3s 8.5s steps(100, end), appear 0.1s 8.5s forwards;
 }
+.terminal-content-mobile .text-4 {
+  animation: typing 3s 11.5s steps(100, end), appear 0.1s 11.5s forwards;
+}
 .terminal-content-mobile .text-5 {
-  animation: typing 3s 10.15s steps(100, end), appear 0.1s 10.15s forwards;
+  animation: typing 3s 13.15s steps(100, end), appear 0.1s 13.15s forwards;
 }
 .terminal-content-mobile .text-6 {
-  animation: typing 3s 12.15s steps(100, end), appear 0.1s 12.15s forwards;
+  animation: typing 3s 15.15s steps(100, end), appear 0.1s 15.15s forwards;
 }
 .terminal-content-mobile .text-7 {
-  animation: typing 3s 14.25s steps(100, end), appear 0.1s 14.25s forwards;
+  animation: typing 3s 17.25s steps(100, end), appear 0.1s 17.25s forwards;
 }
 .terminal-content-mobile .text-8 {
-  animation: typing 3s 16.25s steps(100, end), appear 0.1s 16.25s forwards;
+  animation: typing 3s 19.25s steps(100, end), appear 0.1s 19.25s forwards;
 }
 
 @media all and (max-width: 1200px) {
@@ -624,12 +627,25 @@ svg .svg-text {
   outline: none;
 }
 
+.contact {
+  margin: 50px;
+}
+
+.mail {
+  height: 50px;
+  width: 100px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
 .mail .mail-light {
   position: absolute;
   opacity: 1;
   transition: all 1s;
 }
 .mail .mail-dark {
+  position: absolute;
   opacity: 0;
   transition: all 1s;
 }
@@ -638,6 +654,13 @@ svg .svg-text {
 }
 .mail:hover .mail-dark {
   opacity: 1;
+}
+
+.social {
+  margin-bottom: 50px;
+}
+.social a {
+  margin: 0 5rem 0;
 }
 
 .empty {
@@ -709,6 +732,12 @@ svg .svg-text {
   .about {
     font-size: 2rem;
   }
+  .social {
+    display: flex;
+  }
+  .social a {
+    margin: 0 1rem 0;
+  }
   .contact {
     margin: 1rem 0 1rem;
   }
@@ -765,7 +794,8 @@ svg .svg-text {
     font-size: 2.4rem;
   }
   .project-1 svg {
-    height: auto;
+    height: 65%;
+    left: -5%;
   }
   .intro__desc {
     font-size: 1.4rem;
