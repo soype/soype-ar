@@ -8,12 +8,15 @@
     src: url(./media/Gobold_Regular.otf);
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('./media/RobotoMono-VariableFont_wght.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Gobold;
-    text-transform: uppercase;
 }
 
 html {
@@ -29,6 +32,7 @@ html {
     justify-content: center;
     align-items: center;
     animation: move-up-disappear 1s 3s forwards ease-in;
+    display: none !important;
 }
 
 .loader-logo{
@@ -48,11 +52,19 @@ html {
 }
 
 
+// .main{
+//     overflow-x: hidden;
+//     display: block;
+//     opacity: 0;
+//     animation: appear 1s 4s forwards;
+// font-family: Gobold;
+// }
+
+// Main sin intro
 .main{
     overflow-x: hidden;
     display: block;
-    opacity: 0;
-    animation: appear 1s 4s forwards;
+    opacity: 1;
 }
 
 .header{
@@ -69,6 +81,8 @@ html {
     align-items: center;
     padding: 1rem 3rem 0rem;
     z-index: 2;
+    text-transform: uppercase;
+    font-family: Gobold;
 }
 
 a:visited,
@@ -104,6 +118,7 @@ a{
     color: white;
     position: relative;
     z-index: -1;
+    text-transform: uppercase;
 }
 
 
@@ -152,6 +167,8 @@ a{
     background-color: rgba(181, 180, 180, 0.1);
     display: grid;
     position: relative;
+    text-transform: uppercase;
+    font-family: Gobold;
 }
 
 .section-2__item{
@@ -169,41 +186,170 @@ a{
 
 .item-text{
     z-index: 2;
-    background-color: rgba(73, 73, 73, 0.3);
+    background-color: rgba(73, 73, 73, 0.6);
     padding: 1rem 2rem 1rem;
     border-radius: 2rem;
-    cursor:default;
+    cursor:pointer;
     &:hover{
         color: gold;
     }
 }
 
+
+
 .project-1{
-    background-image: url(./media/space.jpg);
-    background-size: cover;
+    background-image: url(./media/mepex.webp);
+    background-size: 100%;
     top: 0;
     left: 0;
+    position: relative;
+    &:hover {
+        svg{
+            animation: svgAppear 0.1s forwards;
+        /* aplicar la animación a la línea */
+        #zero {
+          animation: moveLine 2s forwards;
+          stroke-dasharray: 1500;
+          stroke-dashoffset: 1500;
+          // stroke: red !important;
+        }
+    
+        #one {
+          animation: moveLine 2s 0.5s ease-in-out forwards;
+          stroke-dasharray: 1500;
+          stroke-dashoffset: 1500;
+          // stroke: green !important;
+        }
+    
+        #two {
+          animation: moveLine 2s 1s ease-in-out forwards;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          // stroke: orange !important;
+        }
+    
+        #three {
+          animation: moveLine 2s 2s ease-in-out forwards;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+        }
+    
+        #four {
+          animation: moveLine 2s 2.5s ease-in-out forwards;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+        }
+    
+        .svg-text {
+          opacity: 0;
+          animation: svgAppear 1s 3.5s forwards;
+        }
+
+    }
+    }
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
+
+@keyframes moveLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes svgAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+svg {
+    opacity: 0;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+
+    .st0 {
+        display: none;
+      }
+      .st1 {
+        fill: none;
+        stroke: #fffdfd;
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+      }
+      .st2 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 8;
+        stroke-miterlimit: 10;
+      }
+      .st3 {
+        fill: #ffffff;
+      }
+      .st4 {
+        font-family: "MyriadPro-Regular";
+      }
+      .st5 {
+        font-size: 36px;
+      }
+    .svg-text{
+        font-family: "Noto Sans Miao";
+    }
+  
+}
+
+// END SVG ANIMATION
+
+
 .project-2{
-    background-image: url(./media/fantasy.jpg);
+    background-image: url(./media/valyser-fondo.webp);
     background-size: cover;
     top: 0;
     left: 50vw;
+    &:hover{
+        background: url(./media/valyser-video.webp);
+    }
 }
 
 .project-3{
-    background-image: url(./media/stadium.jpg);
-    background-size: cover;
+    background-image: linear-gradient(to left, rgba(50,50,50,.3), rgba(51,51,51,.3)),
+    url(./media/indie-club-1.webp);
+    background-size: 110%;
+    background-position: 0% 0%;
     top: 50vh;
     left: 0;
+    transition: all 2s;
+    &:hover{
+        background-position: 50% 10%;
+    }
 }
 
 .project-4{
-    background-image: url(./media/car.jpg);
+    background-image: url(./media/dashboard-light.webp);
     background-size: cover;
     top: 50vh;
     left: 50vw;
+    overflow: hidden;
+    img{
+        position: absolute;
+        opacity: 0;
+        object-fit: cover;
+        object-position: left top;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+    }
+    &:hover{
+        img{
+            opacity: 1;
+        }
+    }
 }
 
 // Section 3
@@ -218,16 +364,330 @@ a{
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    text-transform: none !important;
+    font-family: Gobold;
 }
 
-.about{
-    margin: 0 8rem 0;
-    text-align: center;
+.bio{
+    font-family: Roboto;
+    font-size: 16px;
+    margin: 0 2rem 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 40%;
 }
 
 .about-arch{
     color: gold;
 }
+
+
+// TERMINAL
+
+.terminal{
+    color: white;
+    border: solid 1px gray;
+    border-radius: 1rem;
+    height: 22rem;
+    width: 36rem;
+    font-size: 14px;
+    opacity: 0;
+    animation: appear 1s 1s forwards;
+    background-color: rgb(23, 23, 23);
+    font-family: Roboto;
+    margin: 0 2rem 0;
+}
+
+.terminal-header{
+    height: 2rem;
+    margin: 0 0 0 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: rgb(33, 33, 33);
+    position: relative;
+}
+
+.header-button{
+    height: .7rem;
+    width: .7rem;
+    border-radius: 1rem;
+    border: none;
+    margin: .7rem .25rem;
+    &:first-child{
+        margin-left: .6rem;
+    }
+}
+
+.red{
+    background-color: rgb(230, 97, 97);
+}
+
+.yellow{
+    background-color: rgb(204, 204, 66);
+}
+
+.green{
+    background-color: rgb(59, 200, 59);
+}
+
+.terminal-header-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-family: Roboto;
+}
+
+.terminal-content{
+    margin-top: 1rem;    
+    p{
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .07em; /* Adjust as needed */
+        opacity: 0;
+        font-family: Roboto !important;
+    }
+}
+
+.text-1{
+    animation: 
+    typing 4s 2s steps(100, end),
+    appear .1s 2s forwards;
+}
+
+.text-2{
+    animation: 
+    typing 4s 3.5s steps(100, end),
+    appear .1s 3.5s  forwards;
+}
+
+.text-3{
+    animation: 
+    typing 4s 7.5s steps(100, end),
+    appear .1s 7.5s  forwards;
+}
+
+.text-4{
+    animation: 
+    typing 4s 11.5s steps(100, end),
+    appear .1s 11.5s  forwards;
+}
+
+.text-5{
+    animation: 
+    typing 4s 14s steps(100, end),
+    appear .1s 14s  forwards;
+}
+
+.text-6{
+    animation: 
+    typing 4s 15s steps(100, end),
+    appear .1s 15s  forwards;
+}
+
+/* The typing effect */
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+  }
+  
+
+
+.terminal-type{
+    color: rgb(86, 156, 214);
+}
+
+.terminal-var{
+    color: rgb(157, 220, 254);
+}
+
+.terminal-number{
+    color:lightgreen;
+}
+
+.terminal-separator{
+    color: rgb(218, 112, 214);
+}
+
+.terminal-quote{
+    color: rgb(206, 145, 120);
+}
+
+.terminal-content-mobile{
+    display: none;
+    margin-top: 1rem;
+    p{
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .03em; /* Adjust as needed */
+        opacity: 0;
+    }
+    font-family: Roboto;
+
+    $delay: 2s;
+
+    .text-1{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay forwards;
+    }
+    
+    $delay: calc($delay + 1.5s);
+
+    .text-2{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+    
+    $delay: calc($delay + 2s);
+
+    .text-3{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+
+    $delay: calc($delay + 3s);
+    
+    .text-4{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+
+    $delay: calc($delay + 1.65s);
+    
+    .text-5{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+    
+    $delay: calc($delay + 2s);
+
+    .text-6{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+
+    $delay: calc($delay + 2.1s);
+
+    .text-7{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+
+    $delay: calc($delay + 2s);
+
+    .text-8{
+        animation: 
+        typing 3s $delay steps(100, end),
+        appear .1s $delay  forwards;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .about{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .about{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-1, .project-3{
+        background-size: cover;
+    }
+
+    .project-1{
+        svg{
+            top: auto;
+            left: auto;
+            height: 80%;
+        }
+    }
+
+    .section-3{
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .bio{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .terminal{
+        margin-top: 5rem;
+        max-width: 22rem;
+        overflow-wrap: break-word;
+            overflow: visible;
+    }
+    .terminal-content{
+        display: none;
+    }
+    .terminal-content-mobile{
+        display: inline;
+        max-width: 22rem;
+        overflow-wrap: normal;
+        p{
+            // opacity: 1 !important;
+
+            margin: 0 .5rem;
+        }
+    }
+    .text-1{
+        animation: none;
+    }
+    
+    .text-2{
+        animation: none;
+    }
+    
+    .text-3{
+        animation: none;
+    }
+    
+    .text-4{
+        animation: none;
+    }
+    
+    .text-5{
+        animation: none;
+    }
+    
+    .text-6{
+        animation: none;
+    }
+}
+
+// FIN TERMINAL
 
 // Section 4
 
@@ -240,6 +700,8 @@ a{
     background-color: black;
     background-image: url(./media/dark-steel.jpg);
     background-size: cover;
+    text-transform: uppercase;
+    font-family: Gobold;
     // background-attachment: fixed;
 }
 
@@ -345,7 +807,8 @@ a{
     }
     body .section-2{
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        height: 200vh;
     }
     .section-2__item{
         position: relative;
@@ -410,6 +873,12 @@ a{
         line-height: 4rem;
         line-height-step: 4rem;
         font-size: 2.4rem;
+    }
+
+    .project-1{
+        svg{
+            height: auto;
+        }
     }
     .intro__desc{
         font-size: 1.4rem;
