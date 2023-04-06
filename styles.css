@@ -3,15 +3,15 @@
 @font-face {
   font-family: Gobold;
   font-weight: bold;
-  src: url(./media/Gobold_Bold.otf);
+  src: url(./static/Gobold_Bold.otf);
 }
 @font-face {
   font-family: Gobold;
-  src: url(./media/Gobold_Regular.otf);
+  src: url(./static/Gobold_Regular.otf);
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./media/RobotoMono-VariableFont_wght.ttf");
+  src: url("./static/RobotoMono-VariableFont_wght.ttf");
 }
 * {
   margin: 0;
@@ -100,7 +100,7 @@ a {
 
 .section-1 {
   height: 100vh;
-  background-image: url(./media/intro.jpg);
+  background-image: url(./static/intro.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -179,7 +179,7 @@ a {
 }
 
 .project-1 {
-  background-image: url(./media/mepex.webp);
+  background-image: url(./static/mepex.webp);
   background-size: 100%;
   top: 0;
   left: 0;
@@ -267,17 +267,17 @@ svg .svg-text {
 }
 
 .project-2 {
-  background-image: url(./media/valyser-fondo.webp);
+  background-image: url(./static/valyser-fondo.webp);
   background-size: cover;
   top: 0;
   left: 50vw;
 }
 .project-2:hover {
-  background: url(./media/valyser-video.webp);
+  background: url(./static/valyser-video.webp);
 }
 
 .project-3 {
-  background-image: linear-gradient(to left, rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), url(./media/indie-club-1.webp);
+  background-image: linear-gradient(to left, rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), url(./static/indie-club-1.webp);
   background-size: 110%;
   background-position: 0% 0%;
   top: 50vh;
@@ -289,7 +289,7 @@ svg .svg-text {
 }
 
 .project-4 {
-  background-image: url(./media/dashboard-light.webp);
+  background-image: url(./static/dashboard-light.webp);
   background-size: cover;
   top: 50vh;
   left: 50vw;
@@ -314,7 +314,7 @@ svg .svg-text {
 
 .section-3 {
   height: 100vh;
-  background-image: url(./media/panel.jpg);
+  background-image: url(./static/panel.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: white;
@@ -577,7 +577,7 @@ svg .svg-text {
   align-items: center;
   justify-content: space-around;
   background-color: black;
-  background-image: url(./media/dark-steel.jpg);
+  background-image: url(./static/dark-steel.jpg);
   background-size: cover;
   text-transform: uppercase;
   font-family: Gobold;
