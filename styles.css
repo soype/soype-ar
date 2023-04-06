@@ -570,8 +570,9 @@ svg .svg-text {
   height: 100vh;
   color: white;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   background-color: black;
   background-image: url(./media/dark-steel.jpg);
   background-size: cover;
@@ -623,12 +624,20 @@ svg .svg-text {
   outline: none;
 }
 
-.contact-name {
-  width: 40%;
+.mail .mail-light {
+  position: absolute;
+  opacity: 1;
+  transition: all 1s;
 }
-
-.contact-email {
-  width: 60%;
+.mail .mail-dark {
+  opacity: 0;
+  transition: all 1s;
+}
+.mail:hover .mail-light {
+  opacity: 0;
+}
+.mail:hover .mail-dark {
+  opacity: 1;
 }
 
 .empty {
