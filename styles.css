@@ -348,7 +348,6 @@ svg .svg-text {
   width: 36rem;
   font-size: 14px;
   opacity: 0;
-  animation: appear 1s 5s forwards;
   background-color: rgb(23, 23, 23);
   font-family: Roboto;
   margin: 0 2rem 0;
@@ -407,28 +406,26 @@ svg .svg-text {
   font-family: Roboto !important;
 }
 
-.text-1 {
-  animation: typing 4s 6s steps(100, end), appear 0.1s 6s forwards;
+.terminal-animated {
+  animation: appear 1s 1s forwards;
 }
-
-.text-2 {
+.terminal-animated .text-1 {
+  animation: typing 4s 2s steps(100, end), appear 0.1s 2s forwards;
+}
+.terminal-animated .text-2 {
+  animation: typing 4s 3.5s steps(100, end), appear 0.1s 3.5s forwards;
+}
+.terminal-animated .text-3 {
   animation: typing 4s 7.5s steps(100, end), appear 0.1s 7.5s forwards;
 }
-
-.text-3 {
+.terminal-animated .text-4 {
   animation: typing 4s 11.5s steps(100, end), appear 0.1s 11.5s forwards;
 }
-
-.text-4 {
-  animation: typing 4s 15.5s steps(100, end), appear 0.1s 15.5s forwards;
+.terminal-animated .text-5 {
+  animation: typing 4s 14s steps(100, end), appear 0.1s 14s forwards;
 }
-
-.text-5 {
-  animation: typing 4s 18s steps(100, end), appear 0.1s 18s forwards;
-}
-
-.text-6 {
-  animation: typing 4s 19s steps(100, end), appear 0.1s 19s forwards;
+.terminal-animated .text-6 {
+  animation: typing 4s 15s steps(100, end), appear 0.1s 15s forwards;
 }
 
 /* The typing effect */

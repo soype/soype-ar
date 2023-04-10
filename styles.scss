@@ -396,7 +396,6 @@ svg {
     width: 36rem;
     font-size: 14px;
     opacity: 0;
-    animation: appear 1s 5s forwards;
     background-color: rgb(23, 23, 23);
     font-family: Roboto;
     margin: 0 2rem 0;
@@ -455,43 +454,47 @@ svg {
     }
 }
 
-$delay-terminal: 4s;
+.terminal-animated{
+    $delay-terminal: 0s;
+    animation: appear 1s 1s forwards;
+    .text-1{
+        animation: 
+        typing 4s calc($delay-terminal + 2s) steps(100, end),
+        appear .1s calc($delay-terminal + 2s) forwards;
+    }
 
-.text-1{
-    animation: 
-    typing 4s calc($delay-terminal + 2s) steps(100, end),
-    appear .1s calc($delay-terminal + 2s) forwards;
+    .text-2{
+        animation: 
+        typing 4s calc($delay-terminal + 3.5s) steps(100, end),
+        appear .1s calc($delay-terminal + 3.5s) forwards;
+    }
+
+    .text-3{
+        animation: 
+        typing 4s calc($delay-terminal + 7.5s) steps(100, end),
+        appear .1s calc($delay-terminal + 7.5s)  forwards;
+    }
+
+    .text-4{
+        animation: 
+        typing 4s calc($delay-terminal + 11.5s) steps(100, end),
+        appear .1s calc($delay-terminal + 11.5s)  forwards;
+    }
+
+    .text-5{
+        animation: 
+        typing 4s calc($delay-terminal + 14s) steps(100, end),
+        appear .1s calc($delay-terminal + 14s)  forwards;
+    }
+
+    .text-6{
+        animation: 
+        typing 4s calc($delay-terminal + 15s) steps(100, end),
+        appear .1s calc($delay-terminal + 15s)  forwards;
+    }
 }
 
-.text-2{
-    animation: 
-    typing 4s calc($delay-terminal + 3.5s) steps(100, end),
-    appear .1s calc($delay-terminal + 3.5s) forwards;
-}
 
-.text-3{
-    animation: 
-    typing 4s calc($delay-terminal + 7.5s) steps(100, end),
-    appear .1s calc($delay-terminal + 7.5s)  forwards;
-}
-
-.text-4{
-    animation: 
-    typing 4s calc($delay-terminal + 11.5s) steps(100, end),
-    appear .1s calc($delay-terminal + 11.5s)  forwards;
-}
-
-.text-5{
-    animation: 
-    typing 4s calc($delay-terminal + 14s) steps(100, end),
-    appear .1s calc($delay-terminal + 14s)  forwards;
-}
-
-.text-6{
-    animation: 
-    typing 4s calc($delay-terminal + 15s) steps(100, end),
-    appear .1s calc($delay-terminal + 15s)  forwards;
-}
 
 /* The typing effect */
 

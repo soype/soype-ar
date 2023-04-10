@@ -7,6 +7,25 @@ setTimeout(() => {
   loader.style.display = "none";
 }, 4000);
 
+const terminal = document.getElementById('terminal');
+
+const inViewport = (entries, observer) => {
+  console.log(entries[0]);
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("terminal-animated", entry.isIntersecting);
+    }
+  });
+};
+
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+// Attach observer to every [data-inviewport] element:
+Obs.observe(terminal, obsOptions);
+  
+
+
 let lang = "eng";
 
 const changeLanguage = () => {
