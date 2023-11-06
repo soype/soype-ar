@@ -1,65 +1,64 @@
 @font-face {
-    font-family: Gobold;
-    font-weight: bold;
-    src: url(./static/Gobold_Bold.otf);
+  font-family: Gobold;
+  font-weight: bold;
+  src: url(./static/Gobold_Bold.otf);
 }
 @font-face {
-    font-family: Gobold;
-    src: url(./static/Gobold_Regular.otf);
+  font-family: Gobold;
+  src: url(./static/Gobold_Regular.otf);
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('./static/RobotoMono-VariableFont_wght.ttf');
+  font-family: "Roboto";
+  src: url("./static/RobotoMono-VariableFont_wght.ttf");
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-
-.loader{
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: move-up-disappear 1s 3s forwards ease-in;
-    font-family: Gobold;
-    text-transform: uppercase;
-    // display: none !important;
+  scroll-behavior: smooth;
 }
 
-.loader-logo{
-    font-size: 8rem;
-    color: white;
-    opacity: 0;
-    animation: appear 2s .3s forwards ease-in-out;
+.loader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move-up-disappear 1s 3s forwards ease-in;
+  font-family: Gobold;
+  text-transform: uppercase;
+  // display: none !important;
+}
+
+.loader-logo {
+  font-size: 8rem;
+  color: white;
+  opacity: 0;
+  animation: appear 2s 0.3s forwards ease-in-out;
 }
 
 @keyframes move-up-disappear {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-
-.main{
-    overflow-x: hidden;
-    display: block;
-    opacity: 0;
-    animation: appear 1s 4s forwards;
-font-family: Gobold;
+.main {
+  overflow-x: hidden;
+  display: block;
+  opacity: 0;
+  animation: appear 1s 4s forwards;
+  font-family: Gobold;
 }
 
 // Main sin intro
@@ -70,145 +69,142 @@ font-family: Gobold;
 // font-family: Gobold;
 // }
 
-.header{
-    position: absolute;
-    // color: rgb(171, 168, 168);
-    color: white;
-    top: 0;
-    height: 6rem;
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem 0rem;
-    z-index: 2;
-    text-transform: uppercase;
-    font-family: Gobold;
+.header {
+  position: absolute;
+  // color: rgb(171, 168, 168);
+  color: white;
+  top: 0;
+  height: 6rem;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem 0rem;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: Gobold;
 }
 
 a:visited,
 a:link,
-a{
-    color: white;
-    text-decoration: none;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.navbar__item{
-    margin: 0 3rem 0;
-    cursor: pointer;
-    transition: all .3s;
-    &:hover{
-        color: gold;
-    }
+.navbar__item {
+  margin: 0 3rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    color: gold;
+  }
 }
 
 // Section 1
 
-.section-1{
-    height: 100vh;
-    background-image: url(./static/intro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    position: relative;
-    z-index: -1;
-    text-transform: uppercase;
+.section-1 {
+  height: 100vh;
+  background-image: url(./static/intro.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+  z-index: -1;
+  text-transform: uppercase;
 }
 
-
-.filter{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(181, 180, 180, 0.1);
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(181, 180, 180, 0.1);
 }
 
-.intro{
-    position: absolute;
-    opacity: 0;
-    right: 10rem;
-    top: 45vh;
-    text-align: right;
-    line-height: 4rem;
-    animation: appear 1s 5s ease-in forwards;
-    font-family: Gobold;
+.intro {
+  position: absolute;
+  opacity: 0;
+  right: 10rem;
+  top: 45vh;
+  text-align: right;
+  line-height: 4rem;
+  animation: appear 1s 5s ease-in forwards;
+  font-family: Gobold;
 }
 
-.intro__title{
-    font-size: 4rem;
-    line-height: 4rem;
+.intro__title {
+  font-size: 4rem;
+  line-height: 4rem;
 }
 
-.intro__desc{
-    font-size: 2rem;
+.intro__desc {
+  font-size: 2rem;
 }
 
 @keyframes appear {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // Section 2
 
-.section-2{
-    height: 100vh;
-    background-color: rgba(181, 180, 180, 0.1);
-    display: grid;
-    position: relative;
-    text-transform: uppercase;
-    font-family: Gobold;
+.section-2 {
+  height: 100vh;
+  background-color: rgba(181, 180, 180, 0.1);
+  display: grid;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Gobold;
 }
 
-.section-2__item{
-    position: absolute;
-    height: 50vh;
-    width: 50vw;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.section-2__item {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.item-text{
-    z-index: 2;
-    background-color: rgba(73, 73, 73, 0.6);
-    padding: 1rem 2rem 1rem;
-    border-radius: 2rem;
-    cursor:pointer;
-    &:hover{
-        color: gold;
-    }
+.item-text {
+  z-index: 2;
+  background-color: rgba(73, 73, 73, 0.6);
+  padding: 1rem 2rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  &:hover {
+    color: gold;
+  }
 }
 
+.project-1 {
+  background-image: url(./static/mepex.webp);
+  background-size: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
 
-
-.project-1{
-    background-image: url(./static/mepex.webp);
-    background-size: 100%;
-    top: 0;
-    left: 0;
-    position: relative;
+  @media all and (min-width: 500px) {
     &:hover {
-        svg{
-            animation: svgAppear 0.1s forwards;
+      svg {
+        animation: svgAppear 0.1s forwards;
         /* aplicar la animación a la línea */
         #zero {
           animation: moveLine 2s forwards;
@@ -216,40 +212,85 @@ a{
           stroke-dashoffset: 1500;
           // stroke: red !important;
         }
-    
+
         #one {
           animation: moveLine 2s 0.5s ease-in-out forwards;
           stroke-dasharray: 1500;
           stroke-dashoffset: 1500;
           // stroke: green !important;
         }
-    
+
         #two {
           animation: moveLine 2s 1s ease-in-out forwards;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
           // stroke: orange !important;
         }
-    
+
         #three {
           animation: moveLine 2s 2s ease-in-out forwards;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
         }
-    
+
         #four {
           animation: moveLine 2s 2.5s ease-in-out forwards;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
         }
-    
+
         .svg-text {
           opacity: 0;
           animation: svgAppear 1s 3.5s forwards;
         }
+      }
+    }
+  }
+}
 
+.mepex-animado {
+    svg {
+      animation: svgAppear 0.1s forwards;
+      /* aplicar la animación a la línea */
+      #zero {
+        animation: moveLine 2s forwards;
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+        // stroke: red !important;
+      }
+
+      #one {
+        animation: moveLine 2s 0.5s ease-in-out forwards;
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+        // stroke: green !important;
+      }
+
+      #two {
+        animation: moveLine 2s 1s ease-in-out forwards;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        // stroke: orange !important;
+      }
+
+      #three {
+        animation: moveLine 2s 2s ease-in-out forwards;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+      }
+
+      #four {
+        animation: moveLine 2s 2.5s ease-in-out forwards;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+      }
+
+      .svg-text {
+        opacity: 0;
+        animation: svgAppear 1s 3.5s forwards;
+      }
     }
-    }
+  
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
@@ -270,671 +311,644 @@ a{
 }
 
 svg {
-    opacity: 0;
-    position: absolute;
-    top: -5%;
-    left: 5%;
+  opacity: 0;
+  position: absolute;
+  top: -5%;
+  left: 5%;
 
-    .st0 {
-        display: none;
-      }
-      .st1 {
-        fill: none;
-        stroke: #fffdfd;
-        stroke-width: 4;
-        stroke-miterlimit: 10;
-      }
-      .st2 {
-        fill: none;
-        stroke: #ffffff;
-        stroke-width: 8;
-        stroke-miterlimit: 10;
-      }
-      .st3 {
-        fill: #ffffff;
-      }
-      .st4 {
-        font-family: "MyriadPro-Regular";
-      }
-      .st5 {
-        font-size: 36px;
-      }
-    .svg-text{
-        font-family: "Noto Sans Miao";
-    }
-  
+  .st0 {
+    display: none;
+  }
+  .st1 {
+    fill: none;
+    stroke: #fffdfd;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+  .st2 {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 8;
+    stroke-miterlimit: 10;
+  }
+  .st3 {
+    fill: #ffffff;
+  }
+  .st4 {
+    font-family: "MyriadPro-Regular";
+  }
+  .st5 {
+    font-size: 36px;
+  }
+  .svg-text {
+    font-family: "Noto Sans Miao";
+  }
 }
 
 // END SVG ANIMATION
 
-
-.project-2{
-    background-image: url(./static/valyser-fondo.webp);
-    background-size: cover;
-    top: 0;
-    left: 50vw;
-    &:hover{
-        background: url(./static/valyser-video.webp);
-    }
+.project-2 {
+  background-image: url(./static/valyser-fondo.webp);
+  background-size: cover;
+  top: 0;
+  left: 50vw;
+  &:hover {
+    background: url(./static/valyser-video.webp);
+  }
 }
 
-.project-3{
-    background-image: linear-gradient(to left, rgba(50,50,50,.3), rgba(51,51,51,.3)),
+.project-3 {
+  background-image: linear-gradient(
+      to left,
+      rgba(50, 50, 50, 0.3),
+      rgba(51, 51, 51, 0.3)
+    ),
     url(./static/indie-club-1.webp);
-    background-size: 110%;
-    background-position: 0% 0%;
-    top: 50vh;
-    left: 0;
-    transition: all 2s;
-    &:hover{
-        background-position: 50% 10%;
-    }
+  background-size: 110%;
+  background-position: 0% 0%;
+  top: 50vh;
+  left: 0;
+  transition: all 2s;
+  &:hover {
+    background-position: 50% 10%;
+  }
 }
 
-.project-4{
-    background-image: url(./static/dashboard-light.webp);
-    background-size: cover;
-    top: 50vh;
-    left: 50vw;
-    overflow: hidden;
-    img{
-        position: absolute;
-        opacity: 0;
-        object-fit: cover;
-        object-position: left top;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        transition: all 1s;
+.project-4 {
+  background-image: url(./static/sacaloencuotas.webp);
+  background-size: cover;
+  top: 50vh;
+  left: 50vw;
+  overflow: hidden;
+  img {
+    position: absolute;
+    opacity: 0;
+    object-fit: cover;
+    object-position: left top;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+  }
+  &:hover {
+    img {
+      opacity: 1;
     }
-    &:hover{
-        img{
-            opacity: 1;
-        }
-    }
+  }
 }
 
 // Section 3
 
-.section-3{
-    height: 100vh;
-    background-image: url(./static/panel.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    text-transform: none !important;
-    font-family: Gobold;
+.section-3 {
+  height: 100vh;
+  background-image: url(./static/panel.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-transform: none !important;
+  font-family: Gobold;
 }
 
-.bio{
-    font-family: Roboto;
-    font-size: 16px;
-    margin: 0 2rem 0;
-    background-color: rgba(128, 128, 128, 0.7);
-    padding: 1rem;
-    border-radius: 1rem;
-    max-width: 40%;
+.bio {
+  font-family: Roboto;
+  font-size: 16px;
+  margin: 0 2rem 0;
+  background-color: rgba(128, 128, 128, 0.7);
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 40%;
 }
 
-.about-arch{
-    color: gold;
+.about-arch {
+  color: gold;
 }
-
 
 // TERMINAL
 
-.terminal{
-    color: white;
-    border: solid 1px gray;
-    border-radius: 1rem;
-    height: 22rem;
-    width: 36rem;
-    font-size: 14px;
+.terminal {
+  color: white;
+  border: solid 1px gray;
+  border-radius: 1rem;
+  height: 22rem;
+  width: 36rem;
+  font-size: 14px;
+  opacity: 0;
+  background-color: rgb(23, 23, 23);
+  font-family: Roboto;
+  margin: 0 2rem 0;
+}
+
+.terminal-header {
+  height: 2rem;
+  margin: 0 0 0 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: rgb(33, 33, 33);
+  position: relative;
+}
+
+.header-button {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 0.7rem 0.25rem;
+  &:first-child {
+    margin-left: 0.6rem;
+  }
+}
+
+.red {
+  background-color: rgb(230, 97, 97);
+}
+
+.yellow {
+  background-color: rgb(204, 204, 66);
+}
+
+.green {
+  background-color: rgb(59, 200, 59);
+}
+
+.terminal-header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-family: Roboto;
+}
+
+.terminal-content {
+  margin-top: 1rem;
+  p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.07em; /* Adjust as needed */
     opacity: 0;
-    background-color: rgb(23, 23, 23);
-    font-family: Roboto;
-    margin: 0 2rem 0;
+    font-family: Roboto !important;
+  }
 }
 
-.terminal-header{
-    height: 2rem;
-    margin: 0 0 0 0;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    background-color: rgb(33, 33, 33);
-    position: relative;
+.terminal-animated {
+  $delay-terminal: 0s;
+  animation: appear 1s 1s forwards;
+  .text-1 {
+    animation: typing 4s calc($delay-terminal + 2s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 2s) forwards;
+  }
+
+  .text-2 {
+    animation: typing 4s calc($delay-terminal + 3.5s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 3.5s) forwards;
+  }
+
+  .text-3 {
+    animation: typing 4s calc($delay-terminal + 7.5s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 7.5s) forwards;
+  }
+
+  .text-4 {
+    animation: typing 4s calc($delay-terminal + 11.5s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 11.5s) forwards;
+  }
+
+  .text-5 {
+    animation: typing 4s calc($delay-terminal + 14s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 14s) forwards;
+  }
+
+  .text-6 {
+    animation: typing 4s calc($delay-terminal + 15s) steps(100, end),
+      appear 0.1s calc($delay-terminal + 15s) forwards;
+  }
 }
-
-.header-button{
-    height: .7rem;
-    width: .7rem;
-    border-radius: 1rem;
-    border: none;
-    margin: .7rem .25rem;
-    &:first-child{
-        margin-left: .6rem;
-    }
-}
-
-.red{
-    background-color: rgb(230, 97, 97);
-}
-
-.yellow{
-    background-color: rgb(204, 204, 66);
-}
-
-.green{
-    background-color: rgb(59, 200, 59);
-}
-
-.terminal-header-title{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 14px;
-    font-family: Roboto;
-}
-
-.terminal-content{
-    margin-top: 1rem;    
-    p{
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .07em; /* Adjust as needed */
-        opacity: 0;
-        font-family: Roboto !important;
-    }
-}
-
-.terminal-animated{
-    $delay-terminal: 0s;
-    animation: appear 1s 1s forwards;
-    .text-1{
-        animation: 
-        typing 4s calc($delay-terminal + 2s) steps(100, end),
-        appear .1s calc($delay-terminal + 2s) forwards;
-    }
-
-    .text-2{
-        animation: 
-        typing 4s calc($delay-terminal + 3.5s) steps(100, end),
-        appear .1s calc($delay-terminal + 3.5s) forwards;
-    }
-
-    .text-3{
-        animation: 
-        typing 4s calc($delay-terminal + 7.5s) steps(100, end),
-        appear .1s calc($delay-terminal + 7.5s)  forwards;
-    }
-
-    .text-4{
-        animation: 
-        typing 4s calc($delay-terminal + 11.5s) steps(100, end),
-        appear .1s calc($delay-terminal + 11.5s)  forwards;
-    }
-
-    .text-5{
-        animation: 
-        typing 4s calc($delay-terminal + 14s) steps(100, end),
-        appear .1s calc($delay-terminal + 14s)  forwards;
-    }
-
-    .text-6{
-        animation: 
-        typing 4s calc($delay-terminal + 15s) steps(100, end),
-        appear .1s calc($delay-terminal + 15s)  forwards;
-    }
-}
-
-
 
 /* The typing effect */
 
 @keyframes appear {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes typing {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
+  0% {
+    width: 0;
   }
-  
-
-
-.terminal-type{
-    color: rgb(86, 156, 214);
+  100% {
+    width: 100%;
+  }
 }
 
-.terminal-var{
-    color: rgb(157, 220, 254);
+.terminal-type {
+  color: rgb(86, 156, 214);
 }
 
-.terminal-number{
-    color:lightgreen;
+.terminal-var {
+  color: rgb(157, 220, 254);
 }
 
-.terminal-separator{
-    color: rgb(218, 112, 214);
+.terminal-number {
+  color: lightgreen;
 }
 
-.terminal-quote{
-    color: rgb(206, 145, 120);
+.terminal-separator {
+  color: rgb(218, 112, 214);
 }
 
-.terminal-content-mobile{
-    display: none;
-    margin-top: 1rem;
-    p{
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .03em; /* Adjust as needed */
-        opacity: 0;
-    }
-    font-family: Roboto;
-
-    $delay: 5s;
-
-    .text-1{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay forwards;
-    }
-    
-    $delay: calc($delay + 1.5s);
-
-    .text-2{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-    
-    $delay: calc($delay + 2s);
-
-    .text-3{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-
-    $delay: calc($delay + 3s);
-    
-    .text-4{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-
-    $delay: calc($delay + 1.65s);
-    
-    .text-5{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-    
-    $delay: calc($delay + 2s);
-
-    .text-6{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-
-    $delay: calc($delay + 2.1s);
-
-    .text-7{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
-
-    $delay: calc($delay + 2s);
-
-    .text-8{
-        animation: 
-        typing 3s $delay steps(100, end),
-        appear .1s $delay  forwards;
-    }
+.terminal-quote {
+  color: rgb(206, 145, 120);
 }
 
-@media all and (max-width: 1200px){
-    .about{
-        flex-direction: column;
-    }
+.terminal-content-mobile {
+  display: none;
+  margin-top: 1rem;
+  p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.03em; /* Adjust as needed */
+    opacity: 0;
+  }
+  font-family: Roboto;
+
+  $delay: 5s;
+
+  .text-1 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 1.5s);
+
+  .text-2 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 2s);
+
+  .text-3 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 3s);
+
+  .text-4 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 1.65s);
+
+  .text-5 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 2s);
+
+  .text-6 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 2.1s);
+
+  .text-7 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+
+  $delay: calc($delay + 2s);
+
+  .text-8 {
+    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .about {
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 800px) {
-    .about{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .project-1, .project-3{
-        background-size: cover;
-    }
+  .project-1,
+  .project-3 {
+    background-size: cover;
+  }
 
-    .project-1{
-        svg{
-            top: auto;
-            left: auto;
-            height: 80%;
-        }
+  .project-1 {
+    svg {
+      top: auto;
+      left: auto;
+      height: 80%;
     }
+  }
 
-    .section-3{
-        flex-direction: column;
-        height: auto;
-        padding: 1rem;
-    }
+  .section-3 {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
 
-    .bio{
-        max-width: 100%;
-        margin: 0;
-    }
+  .bio {
+    max-width: 100%;
+    margin: 0;
+  }
 
-    .terminal{
-        margin-top: 5rem;
-        max-width: 22rem;
-        overflow-wrap: break-word;
-            overflow: visible;
-    }
-    .terminal-content{
-        display: none;
-    }
-    .terminal-content-mobile{
-        display: inline;
-        max-width: 22rem;
-        overflow-wrap: normal;
-        p{
-            // opacity: 1 !important;
+  .terminal {
+    margin-top: 5rem;
+    max-width: 22rem;
+    overflow-wrap: break-word;
+    overflow: visible;
+  }
+  .terminal-content {
+    display: none;
+  }
+  .terminal-content-mobile {
+    display: inline;
+    max-width: 22rem;
+    overflow-wrap: normal;
+    p {
+      // opacity: 1 !important;
 
-            margin: 0 .5rem;
-        }
+      margin: 0 0.5rem;
     }
-    .text-1{
-        animation: none;
-    }
-    
-    .text-2{
-        animation: none;
-    }
-    
-    .text-3{
-        animation: none;
-    }
-    
-    .text-4{
-        animation: none;
-    }
-    
-    .text-5{
-        animation: none;
-    }
-    
-    .text-6{
-        animation: none;
-    }
+  }
+  .text-1 {
+    animation: none;
+  }
+
+  .text-2 {
+    animation: none;
+  }
+
+  .text-3 {
+    animation: none;
+  }
+
+  .text-4 {
+    animation: none;
+  }
+
+  .text-5 {
+    animation: none;
+  }
+
+  .text-6 {
+    animation: none;
+  }
 }
 
 // FIN TERMINAL
 
 // Section 4
 
-.section-4{
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: black;
-    background-image: url(./static/dark-steel.jpg);
-    background-size: cover;
-    text-transform: uppercase;
+.section-4 {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  background-image: url(./static/dark-steel.jpg);
+  background-size: cover;
+  text-transform: uppercase;
+  font-family: Gobold;
+  // background-attachment: fixed;
+}
+
+.contact {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // width: 40rem;
+}
+
+.form__section-1 {
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact__text {
+  margin: 1rem 1rem 1rem;
+  background-color: rgb(109, 106, 106);
+  border: none;
+  height: 4rem;
+  width: 16rem;
+  padding: 0 1rem 0;
+  color: white;
+  font-family: Gobold;
+  &::placeholder {
+    color: rgb(219, 219, 219);
     font-family: Gobold;
-    // background-attachment: fixed;
+    font-size: 1.5rem;
+  }
+  font-size: 1.5rem;
+  &:focus {
+    outline: none;
+  }
 }
 
-.contact{
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 6rem;
-    color: white;
+.contact {
+  margin: 50px;
 }
 
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // width: 40rem;
+.mail {
+  height: 50px;
+  width: 100px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  .mail-light {
+    position: absolute;
+    opacity: 1;
+    transition: all 1s;
+  }
+  .mail-dark {
+    position: absolute;
+    opacity: 0;
+    transition: all 1s;
+  }
+  &:hover {
+    .mail-light {
+      opacity: 0;
+    }
+    .mail-dark {
+      opacity: 1;
+    }
+  }
 }
 
-.form__section-1{
-    width: 40rem;
-    display: flex;
-    flex-direction: row;
+.social {
+  margin-bottom: 50px;
+  a {
+    margin: 0 5rem 0;
+  }
 }
 
-.contact__text{
-    margin: 1rem 1rem 1rem;
-    background-color: rgb(109, 106, 106);
-    border: none;
-    height: 4rem;
-    width: 16rem;
-    padding: 0 1rem 0;
-    color: white;
+.empty {
+  height: 4rem;
+  width: 10rem;
+}
+
+.contact-textarea {
+  width: 38rem;
+  margin: 0 1rem 0;
+  resize: none;
+  background-color: rgb(109, 106, 106);
+  border: none;
+  color: white;
+  &::placeholder {
+    color: rgb(219, 219, 219);
     font-family: Gobold;
-    &::placeholder{
-        color: rgb(219, 219, 219);
-        font-family: Gobold;
-        font-size: 1.5rem;
-    }
     font-size: 1.5rem;
-    &:focus{
-        outline: none;
-    }
+  }
+  padding: 1rem 1rem 0;
+  font-size: 1.5rem;
+  &:focus {
+    outline: none;
+  }
 }
 
-.contact{
-    margin: 50px;
+.send {
+  color: rgb(109, 106, 106);
+  background-color: white;
+  height: 4rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem;
+  border: none;
+  margin: 1rem 0 0;
 }
-
-.mail{
-    height: 50px;
-    width: 100px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
-    .mail-light{
-        position: absolute;
-        opacity: 1;
-        transition: all 1s;
-    }
-    .mail-dark{
-        position: absolute;
-        opacity: 0;
-        transition: all 1s;
-    }
-    &:hover{
-        .mail-light{
-            opacity: 0;
-        }
-        .mail-dark{
-            opacity: 1;
-        }
-    }
-}
-
-.social{
-    margin-bottom: 50px;
-    a{
-        margin: 0 5rem 0;
-    }
-}
-
-
-
-.empty{
-    height: 4rem;
-    width: 10rem;
-}
-
-.contact-textarea{
-    width: 38rem;
-    margin: 0 1rem 0;
-    resize: none;
-    background-color: rgb(109, 106, 106);
-    border: none;
-    color: white;
-    &::placeholder{
-        color: rgb(219, 219, 219);
-        font-family: Gobold;
-        font-size: 1.5rem;
-    }
-    padding: 1rem 1rem 0;
-    font-size: 1.5rem;
-    &:focus{
-        outline: none;
-    }
-}
-
-.send{
-    color:rgb(109, 106, 106);
-    background-color: white;
-    height: 4rem;
-    width: 6rem;
-    font-size: 1.5rem;
-    padding: 1rem 1rem 1rem;
-    border: none;
-    margin: 1rem 0 0;
-}
-
 
 // Responsive
 
-@media screen and (max-width: 850px){
-    .intro{
-        padding: 0;
-        margin: 0;
-        right: 0;
-        left: 0;
-        text-align: center;
+@media screen and (max-width: 850px) {
+  .intro {
+    padding: 0;
+    margin: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+  .loader-logo {
+    font-size: 24px !important;
+  }
+  .header {
+    padding: 0 1rem 0;
+  }
+  body .section-2 {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+  }
+  .section-2__item {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    top: 0;
+    left: 0;
+  }
+  .about {
+    font-size: 2rem;
+  }
+  .social {
+    display: flex;
+    a {
+      margin: 0 1rem 0;
     }
-    .loader-logo{
-        font-size: 24px !important;
-    }
-    .header{
-        padding: 0 1rem 0;
-    }
-    body .section-2{
-        display: flex;
-        flex-direction: column;
-        height: 200vh;
-    }
-    .section-2__item{
-        position: relative;
-        width: 100%;
-        height: 50vh;
-        top: 0;
-        left: 0;
-    }
-    .about{
-        font-size: 2rem;
-    }
-    .social{
-        display: flex;
-        a{
-            margin: 0 1rem 0;
-        }
-    }
+  }
 
-    // Contact 
+  // Contact
 
-    .contact{
-        margin: 1rem 0 1rem;
+  .contact {
+    margin: 1rem 0 1rem;
+  }
+  .contact-form {
+    margin: 0 1rem 0;
+  }
+  .form__section-1 {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__text {
+    margin: 0rem 0rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    &::placeholder {
+      font-size: 1rem;
     }
-    .contact-form{
-        margin: 0 1rem 0;
+    &:focus {
+      outline: none;
     }
-    .form__section-1{
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
+  }
+  .contact-textarea {
+    width: 100%;
+    height: 15rem;
+    font-size: 1rem;
+    &::placeholder {
+      font-size: 1rem;
     }
-    .contact__text{
-        margin: 0rem 0rem 1rem;
-        font-size: 1rem;
-        width: 100%;
-        &::placeholder{
-            font-size: 1rem;
-        }
-        &:focus{
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
-    .contact-textarea{
-        width: 100%;
-        height: 15rem;
-        font-size: 1rem;
-        &::placeholder{
-            font-size: 1rem;
-        }
-        &:focus{
-            outline: none;
-        }
-    }
-    .send{
-        font-size: 1.5rem;
-    }
+  }
+  .send {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width: 800px){
-    .navbar__item{
-        margin: 0 1rem 0;
-    }
+@media screen and (max-width: 800px) {
+  .navbar__item {
+    margin: 0 1rem 0;
+  }
 }
 
-@media screen and (max-width: 500px){
-    .intro__title{
-        line-height: 4rem;
-        line-height-step: 4rem;
-        font-size: 2.4rem;
-    }
+@media screen and (max-width: 500px) {
+  .intro__title {
+    line-height: 4rem;
+    line-height-step: 4rem;
+    font-size: 2.4rem;
+  }
 
-    .project-1{
-        svg{
-            height: 65%;
-            left: -5%;
-        }
+  .project-1 {
+    svg {
+      height: 65%;
+      left: -5%;
     }
-    .intro__desc{
-        font-size: 1.4rem;
-    }
-    .navbar__item{
-        margin: 0 .3rem 0;
-    }
-    .section-4{
-        height: auto;
-    }
+  }
+  .intro__desc {
+    font-size: 1.4rem;
+  }
+  .navbar__item {
+    margin: 0 0.3rem 0;
+  }
+  .section-4 {
+    height: auto;
+  }
 }

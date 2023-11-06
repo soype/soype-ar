@@ -185,36 +185,72 @@ a {
   left: 0;
   position: relative;
 }
-.project-1:hover svg {
+@media all and (min-width: 500px) {
+  .project-1:hover svg {
+    animation: svgAppear 0.1s forwards;
+    /* aplicar la animación a la línea */
+  }
+  .project-1:hover svg #zero {
+    animation: moveLine 2s forwards;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+  }
+  .project-1:hover svg #one {
+    animation: moveLine 2s 0.5s ease-in-out forwards;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+  }
+  .project-1:hover svg #two {
+    animation: moveLine 2s 1s ease-in-out forwards;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  .project-1:hover svg #three {
+    animation: moveLine 2s 2s ease-in-out forwards;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  .project-1:hover svg #four {
+    animation: moveLine 2s 2.5s ease-in-out forwards;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  .project-1:hover svg .svg-text {
+    opacity: 0;
+    animation: svgAppear 1s 3.5s forwards;
+  }
+}
+
+.mepex-animado svg {
   animation: svgAppear 0.1s forwards;
   /* aplicar la animación a la línea */
 }
-.project-1:hover svg #zero {
+.mepex-animado svg #zero {
   animation: moveLine 2s forwards;
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
 }
-.project-1:hover svg #one {
+.mepex-animado svg #one {
   animation: moveLine 2s 0.5s ease-in-out forwards;
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
 }
-.project-1:hover svg #two {
+.mepex-animado svg #two {
   animation: moveLine 2s 1s ease-in-out forwards;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
-.project-1:hover svg #three {
+.mepex-animado svg #three {
   animation: moveLine 2s 2s ease-in-out forwards;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
-.project-1:hover svg #four {
+.mepex-animado svg #four {
   animation: moveLine 2s 2.5s ease-in-out forwards;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
-.project-1:hover svg .svg-text {
+.mepex-animado svg .svg-text {
   opacity: 0;
   animation: svgAppear 1s 3.5s forwards;
 }
@@ -289,7 +325,7 @@ svg .svg-text {
 }
 
 .project-4 {
-  background-image: url(./static/dashboard-light.webp);
+  background-image: url(./static/sacaloencuotas.webp);
   background-size: cover;
   top: 50vh;
   left: 50vw;
@@ -513,7 +549,8 @@ svg .svg-text {
     align-items: center;
     justify-content: center;
   }
-  .project-1, .project-3 {
+  .project-1,
+  .project-3 {
     background-size: cover;
   }
   .project-1 svg {
