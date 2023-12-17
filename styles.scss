@@ -1,16 +1,16 @@
 @font-face {
   font-family: Gobold;
   font-weight: bold;
-  src: url(./static/Gobold_Bold.otf);
+  src: url(./static/fonts/Gobold_Bold.otf);
 }
 @font-face {
   font-family: Gobold;
-  src: url(./static/Gobold_Regular.otf);
+  src: url(./static/fonts/Gobold_Regular.otf);
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("./static/RobotoMono-VariableFont_wght.ttf");
+  src: url("./static/fonts/RobotoMono-VariableFont_wght.ttf");
 }
 
 * {
@@ -24,6 +24,7 @@ html {
 }
 
 .loader {
+  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -62,12 +63,12 @@ html {
 }
 
 // Main sin intro
-// .main{
-//     overflow-x: hidden;
-//     display: block;
-//     opacity: 1;
-// font-family: Gobold;
-// }
+.main {
+  overflow-x: hidden;
+  display: block;
+  opacity: 1;
+  font-family: Gobold;
+}
 
 .header {
   position: absolute;
@@ -113,7 +114,7 @@ a {
 
 .section-1 {
   height: 100vh;
-  background-image: url(./static/intro.jpg);
+  background-image: url(./static/images/intro.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -195,7 +196,7 @@ a {
 }
 
 .project-1 {
-  background-image: url(./static/mepex.webp);
+  background-image: url(./static/images/mepex.webp);
   background-size: 100%;
   top: 0;
   left: 0;
@@ -249,48 +250,47 @@ a {
 }
 
 .mepex-animado {
-    svg {
-      animation: svgAppear 0.1s forwards;
-      /* aplicar la animación a la línea */
-      #zero {
-        animation: moveLine 2s forwards;
-        stroke-dasharray: 1500;
-        stroke-dashoffset: 1500;
-        // stroke: red !important;
-      }
-
-      #one {
-        animation: moveLine 2s 0.5s ease-in-out forwards;
-        stroke-dasharray: 1500;
-        stroke-dashoffset: 1500;
-        // stroke: green !important;
-      }
-
-      #two {
-        animation: moveLine 2s 1s ease-in-out forwards;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        // stroke: orange !important;
-      }
-
-      #three {
-        animation: moveLine 2s 2s ease-in-out forwards;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-      }
-
-      #four {
-        animation: moveLine 2s 2.5s ease-in-out forwards;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-      }
-
-      .svg-text {
-        opacity: 0;
-        animation: svgAppear 1s 3.5s forwards;
-      }
+  svg {
+    animation: svgAppear 0.1s forwards;
+    /* aplicar la animación a la línea */
+    #zero {
+      animation: moveLine 2s forwards;
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+      // stroke: red !important;
     }
-  
+
+    #one {
+      animation: moveLine 2s 0.5s ease-in-out forwards;
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+      // stroke: green !important;
+    }
+
+    #two {
+      animation: moveLine 2s 1s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      // stroke: orange !important;
+    }
+
+    #three {
+      animation: moveLine 2s 2s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    #four {
+      animation: moveLine 2s 2.5s ease-in-out forwards;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    .svg-text {
+      opacity: 0;
+      animation: svgAppear 1s 3.5s forwards;
+    }
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
@@ -348,12 +348,12 @@ svg {
 // END SVG ANIMATION
 
 .project-2 {
-  background-image: url(./static/valyser-fondo.webp);
+  background-image: url(./static/images/valyser-fondo.webp);
   background-size: cover;
   top: 0;
   left: 50vw;
   &:hover {
-    background: url(./static/valyser-video.webp);
+    background: url(./static/images/valyser-video.webp);
   }
 }
 
@@ -363,7 +363,7 @@ svg {
       rgba(50, 50, 50, 0.3),
       rgba(51, 51, 51, 0.3)
     ),
-    url(./static/indie-club-1.webp);
+    url(./static/images/indie-club-1.webp);
   background-size: 110%;
   background-position: 0% 0%;
   top: 50vh;
@@ -375,7 +375,7 @@ svg {
 }
 
 .project-4 {
-  background-image: url(./static/sacaloencuotas.webp);
+  background-image: url(./static/images/sacaloencuotas.webp);
   background-size: cover;
   top: 50vh;
   left: 50vw;
@@ -402,7 +402,7 @@ svg {
 
 .section-3 {
   height: 100vh;
-  background-image: url(./static/panel.jpg);
+  background-image: url(./static/images/panel.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: white;
@@ -570,64 +570,66 @@ svg {
   color: rgb(206, 145, 120);
 }
 
-.terminal-content-mobile {
-  display: none;
-  margin-top: 1rem;
-  p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.03em; /* Adjust as needed */
-    opacity: 0;
-  }
-  font-family: Roboto;
+.terminal-animated {
+  .terminal-content-mobile {
+    display: none;
+    margin-top: 1rem;
+    p {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.03em; /* Adjust as needed */
+      opacity: 0;
+    }
+    font-family: Roboto;
 
-  $delay: 5s;
+    $delay: 2s;
 
-  .text-1 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-1 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 1.5s);
+    $delay: calc($delay + 1.5s);
 
-  .text-2 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-2 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 2s);
+    $delay: calc($delay + 2s);
 
-  .text-3 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-3 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 3s);
+    $delay: calc($delay + 3s);
 
-  .text-4 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-4 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 1.65s);
+    $delay: calc($delay + 1.65s);
 
-  .text-5 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-5 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 2s);
+    $delay: calc($delay + 2s);
 
-  .text-6 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-6 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 2.1s);
+    $delay: calc($delay + 2.1s);
 
-  .text-7 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
-  }
+    .text-7 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
 
-  $delay: calc($delay + 2s);
+    $delay: calc($delay + 2s);
 
-  .text-8 {
-    animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    .text-8 {
+      animation: typing 3s $delay steps(100, end), appear 0.1s $delay forwards;
+    }
   }
 }
 
@@ -677,16 +679,19 @@ svg {
   .terminal-content {
     display: none;
   }
-  .terminal-content-mobile {
-    display: inline;
-    max-width: 22rem;
-    overflow-wrap: normal;
-    p {
-      // opacity: 1 !important;
-
-      margin: 0 0.5rem;
+  .terminal-animated{
+    .terminal-content-mobile {
+      display: inline;
+      max-width: 22rem;
+      overflow-wrap: normal;
+      p {
+        // opacity: 1 !important;
+  
+        margin: 0 0.5rem;
+      }
     }
   }
+  
   .text-1 {
     animation: none;
   }
@@ -724,11 +729,15 @@ svg {
   align-items: center;
   justify-content: space-around;
   background-color: black;
-  background-image: url(./static/dark-steel.jpg);
   background-size: cover;
   text-transform: uppercase;
   font-family: Gobold;
+  position: relative;
+  overflow: hidden;
   // background-attachment: fixed;
+  * {
+    z-index: 1;
+  }
 }
 
 .contact {
@@ -951,4 +960,22 @@ svg {
   .section-4 {
     height: auto;
   }
+}
+
+// Fix background images to use srcset
+section {
+  position: relative;
+  overflow: hidden;
+  * {
+    z-index: 1;
+  }
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  right: 0;
 }

@@ -3,15 +3,15 @@
 @font-face {
   font-family: Gobold;
   font-weight: bold;
-  src: url(./static/Gobold_Bold.otf);
+  src: url(./static/fonts/Gobold_Bold.otf);
 }
 @font-face {
   font-family: Gobold;
-  src: url(./static/Gobold_Regular.otf);
+  src: url(./static/fonts/Gobold_Regular.otf);
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./static/RobotoMono-VariableFont_wght.ttf");
+  src: url("./static/fonts/RobotoMono-VariableFont_wght.ttf");
 }
 * {
   margin: 0;
@@ -24,6 +24,7 @@ html {
 }
 
 .loader {
+  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -56,6 +57,13 @@ html {
   display: block;
   opacity: 0;
   animation: appear 1s 4s forwards;
+  font-family: Gobold;
+}
+
+.main {
+  overflow-x: hidden;
+  display: block;
+  opacity: 1;
   font-family: Gobold;
 }
 
@@ -100,7 +108,7 @@ a {
 
 .section-1 {
   height: 100vh;
-  background-image: url(./static/intro.jpg);
+  background-image: url(./static/images/intro.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -179,7 +187,7 @@ a {
 }
 
 .project-1 {
-  background-image: url(./static/mepex.webp);
+  background-image: url(./static/images/mepex.webp);
   background-size: 100%;
   top: 0;
   left: 0;
@@ -303,17 +311,17 @@ svg .svg-text {
 }
 
 .project-2 {
-  background-image: url(./static/valyser-fondo.webp);
+  background-image: url(./static/images/valyser-fondo.webp);
   background-size: cover;
   top: 0;
   left: 50vw;
 }
 .project-2:hover {
-  background: url(./static/valyser-video.webp);
+  background: url(./static/images/valyser-video.webp);
 }
 
 .project-3 {
-  background-image: linear-gradient(to left, rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), url(./static/indie-club-1.webp);
+  background-image: linear-gradient(to left, rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), url(./static/images/indie-club-1.webp);
   background-size: 110%;
   background-position: 0% 0%;
   top: 50vh;
@@ -325,7 +333,7 @@ svg .svg-text {
 }
 
 .project-4 {
-  background-image: url(./static/sacaloencuotas.webp);
+  background-image: url(./static/images/sacaloencuotas.webp);
   background-size: cover;
   top: 50vh;
   left: 50vw;
@@ -350,7 +358,7 @@ svg .svg-text {
 
 .section-3 {
   height: 100vh;
-  background-image: url(./static/panel.jpg);
+  background-image: url(./static/images/panel.jpg);
   background-size: cover;
   background-attachment: fixed;
   color: white;
@@ -501,41 +509,41 @@ svg .svg-text {
   color: rgb(206, 145, 120);
 }
 
-.terminal-content-mobile {
+.terminal-animated .terminal-content-mobile {
   display: none;
   margin-top: 1rem;
   font-family: Roboto;
 }
-.terminal-content-mobile p {
+.terminal-animated .terminal-content-mobile p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 1rem; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.03em; /* Adjust as needed */
   opacity: 0;
 }
-.terminal-content-mobile .text-1 {
-  animation: typing 3s 5s steps(100, end), appear 0.1s 5s forwards;
+.terminal-animated .terminal-content-mobile .text-1 {
+  animation: typing 3s 2s steps(100, end), appear 0.1s 2s forwards;
 }
-.terminal-content-mobile .text-2 {
-  animation: typing 3s 6.5s steps(100, end), appear 0.1s 6.5s forwards;
+.terminal-animated .terminal-content-mobile .text-2 {
+  animation: typing 3s 3.5s steps(100, end), appear 0.1s 3.5s forwards;
 }
-.terminal-content-mobile .text-3 {
+.terminal-animated .terminal-content-mobile .text-3 {
+  animation: typing 3s 5.5s steps(100, end), appear 0.1s 5.5s forwards;
+}
+.terminal-animated .terminal-content-mobile .text-4 {
   animation: typing 3s 8.5s steps(100, end), appear 0.1s 8.5s forwards;
 }
-.terminal-content-mobile .text-4 {
-  animation: typing 3s 11.5s steps(100, end), appear 0.1s 11.5s forwards;
+.terminal-animated .terminal-content-mobile .text-5 {
+  animation: typing 3s 10.15s steps(100, end), appear 0.1s 10.15s forwards;
 }
-.terminal-content-mobile .text-5 {
-  animation: typing 3s 13.15s steps(100, end), appear 0.1s 13.15s forwards;
+.terminal-animated .terminal-content-mobile .text-6 {
+  animation: typing 3s 12.15s steps(100, end), appear 0.1s 12.15s forwards;
 }
-.terminal-content-mobile .text-6 {
-  animation: typing 3s 15.15s steps(100, end), appear 0.1s 15.15s forwards;
+.terminal-animated .terminal-content-mobile .text-7 {
+  animation: typing 3s 14.25s steps(100, end), appear 0.1s 14.25s forwards;
 }
-.terminal-content-mobile .text-7 {
-  animation: typing 3s 17.25s steps(100, end), appear 0.1s 17.25s forwards;
-}
-.terminal-content-mobile .text-8 {
-  animation: typing 3s 19.25s steps(100, end), appear 0.1s 19.25s forwards;
+.terminal-animated .terminal-content-mobile .text-8 {
+  animation: typing 3s 16.25s steps(100, end), appear 0.1s 16.25s forwards;
 }
 
 @media all and (max-width: 1200px) {
@@ -576,12 +584,12 @@ svg .svg-text {
   .terminal-content {
     display: none;
   }
-  .terminal-content-mobile {
+  .terminal-animated .terminal-content-mobile {
     display: inline;
     max-width: 22rem;
     overflow-wrap: normal;
   }
-  .terminal-content-mobile p {
+  .terminal-animated .terminal-content-mobile p {
     margin: 0 0.5rem;
   }
   .text-1 {
@@ -611,10 +619,14 @@ svg .svg-text {
   align-items: center;
   justify-content: space-around;
   background-color: black;
-  background-image: url(./static/dark-steel.jpg);
   background-size: cover;
   text-transform: uppercase;
   font-family: Gobold;
+  position: relative;
+  overflow: hidden;
+}
+.section-4 * {
+  z-index: 1;
 }
 
 .contact {
@@ -840,4 +852,20 @@ svg .svg-text {
   .section-4 {
     height: auto;
   }
+}
+section {
+  position: relative;
+  overflow: hidden;
+}
+section * {
+  z-index: 1;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=styles.css.map */
