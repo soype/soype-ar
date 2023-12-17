@@ -24,7 +24,6 @@ html {
 }
 
 .loader {
-  display: none;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -63,12 +62,12 @@ html {
 }
 
 // Main sin intro
-.main {
-  overflow-x: hidden;
-  display: block;
-  opacity: 1;
-  font-family: Gobold;
-}
+// .main {
+//   overflow-x: hidden;
+//   display: block;
+//   opacity: 1;
+//   font-family: Gobold;
+// }
 
 .header {
   position: absolute;
