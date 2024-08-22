@@ -677,6 +677,19 @@ a {
   }
 }
 
+@media all and (max-width: 1080px){
+  .section-3{
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+
+    .bio{
+      max-width: 36rem;
+    }
+  }
+}
+
 @media all and (max-width: 800px) {
   .about {
     flex-direction: column;
