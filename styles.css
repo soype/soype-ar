@@ -309,7 +309,8 @@ svg .svg-text {
   left: 50vw;
 }
 .project-2:hover {
-  background: url(./static/valyser-video.webp);
+  background: url(./static/valyser-video.webp) no-repeat;
+  background-size: cover;
 }
 
 .project-3 {

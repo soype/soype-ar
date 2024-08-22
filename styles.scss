@@ -353,7 +353,8 @@ svg {
   top: 0;
   left: 50vw;
   &:hover {
-    background: url(./static/valyser-video.webp);
+    background: url(./static/valyser-video.webp) no-repeat;
+    background-size: cover;
   }
 }
 
