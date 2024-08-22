@@ -23,14 +23,28 @@ const inViewport = (entries, observer) => {
         entry.target.classList.add("terminal-animated", entry.isIntersecting);  
       }
       if(entry.target === project2){
-        project1.classList.add('mepex-animado')
+        reAnimate();
       }
       if(entry.target === project3){
-        project1.classList.add('mepex-animado')
+        reAnimate();
       }
     }
   });
 };
+
+
+//Re evaluate if mepex is true every 5 seconds
+const reAnimate = () => {
+  project1.classList.toggle('mepex-animado')
+  setInterval(() => {
+      setTimeout(() => {
+        project1.classList.remove('mepex-animado')
+      }, 1);
+      setTimeout(() => {
+        project1.classList.add('mepex-animado')
+      }, 2);
+  }, 5000);  
+}
 
 const Obs = new IntersectionObserver(inViewport);
 const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
