@@ -12,9 +12,9 @@ setTimeout(() => {
 }, 4000);
 
 const terminal = document.getElementById('terminal');
-const project1 = document.getElementById('project-1');
-const project2 = document.getElementById('project-2');
-const project3 = document.getElementById('project-3');
+const mepex = document.getElementById('project-mepex');
+const project2 = document.getElementById('project-mepex');
+const project4 = document.getElementById('project-4');
 
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
@@ -23,28 +23,14 @@ const inViewport = (entries, observer) => {
         entry.target.classList.add("terminal-animated", entry.isIntersecting);  
       }
       if(entry.target === project2){
-        reAnimate();
+        mepex.classList.add('mepex-animado')
       }
-      if(entry.target === project3){
-        reAnimate();
+      if(entry.target === project4){
+        mepex.classList.add('mepex-animado')
       }
     }
   });
 };
-
-
-//Re evaluate if mepex is true every 5 seconds
-const reAnimate = () => {
-  project1.classList.toggle('mepex-animado')
-  setInterval(() => {
-      setTimeout(() => {
-        project1.classList.remove('mepex-animado')
-      }, 1);
-      setTimeout(() => {
-        project1.classList.add('mepex-animado')
-      }, 2);
-  }, 5000);  
-}
 
 const Obs = new IntersectionObserver(inViewport);
 const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
@@ -54,9 +40,36 @@ Obs.observe(terminal, obsOptions);
 if(isMobileDevice()){
   Obs.observe(project2, obsOptions);
 }else{
-  Obs.observe(project3, obsOptions)
+  Obs.observe(project4, obsOptions)
 }
 
+
+const reload = document.getElementById('reload');
+let counter = 0;
+reload.addEventListener('click', function(){
+  const svgElement = mepex.querySelector('.animacion');
+  const newSvgElement = svgElement.cloneNode(true);
+  if(!svgElement.classList.contains('mepex-animado')){
+    newSvgElement.classList.add('mepex-animado');  
+  }
+  if (svgElement) {
+    svgElement.remove();
+  }
+  mepex.appendChild(newSvgElement);
+  counter++;
+  if(counter === 3){
+    const message = document.createElement('p');
+    message.innerHTML = "Pretty cool, huh?";
+    message.classList.add('easter-egg');
+    mepex.querySelector('.item-text').appendChild(message);
+  }
+  if(counter === 4){
+    const message = document.createElement('p');
+    message.innerHTML = "The entire animation is made with CSS";
+    message.classList.add('easter-egg-2');
+    mepex.querySelector('.item-text').appendChild(message);
+  }
+});
   
 
 

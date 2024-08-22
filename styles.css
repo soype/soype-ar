@@ -154,12 +154,13 @@ a {
   position: relative;
   text-transform: uppercase;
   font-family: Gobold;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .section-2__item {
-  position: absolute;
-  height: 50vh;
-  width: 50vw;
   color: white;
   display: flex;
   flex-direction: column;
@@ -178,7 +179,7 @@ a {
   color: gold;
 }
 
-.project-1 {
+.project-mepex {
   background-image: url(./static/mepex.webp);
   background-size: 100%;
   top: 0;
@@ -186,36 +187,36 @@ a {
   position: relative;
 }
 @media all and (min-width: 500px) {
-  .project-1:hover svg {
+  .project-mepex:hover svg {
     animation: svgAppear 0.1s forwards;
     /* aplicar la animación a la línea */
   }
-  .project-1:hover svg #zero {
+  .project-mepex:hover svg #zero {
     animation: moveLine 2s forwards;
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
   }
-  .project-1:hover svg #one {
+  .project-mepex:hover svg #one {
     animation: moveLine 2s 0.5s ease-in-out forwards;
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
   }
-  .project-1:hover svg #two {
+  .project-mepex:hover svg #two {
     animation: moveLine 2s 1s ease-in-out forwards;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
-  .project-1:hover svg #three {
+  .project-mepex:hover svg #three {
     animation: moveLine 2s 2s ease-in-out forwards;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
-  .project-1:hover svg #four {
+  .project-mepex:hover svg #four {
     animation: moveLine 2s 2.5s ease-in-out forwards;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
-  .project-1:hover svg .svg-text {
+  .project-mepex:hover svg .svg-text {
     opacity: 0;
     animation: svgAppear 1s 3.5s forwards;
   }
@@ -268,71 +269,94 @@ a {
     opacity: 1;
   }
 }
-svg {
+.project-mepex svg {
+  position: absolute;
+}
+
+.project-mepex .reload {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border: none;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.project-mepex .reload svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.easter-egg {
+  font-size: 1.25rem;
+  color: rgb(255, 255, 87);
+}
+
+.easter-egg-2 {
+  font-size: 1rem;
+  color: rgb(255, 255, 87);
+}
+
+.mepex-animado .animacion {
   opacity: 0;
   position: absolute;
-  top: -5%;
   left: 5%;
 }
-svg .st0 {
+.mepex-animado .animacion .st0 {
   display: none;
 }
-svg .st1 {
+.mepex-animado .animacion .st1 {
   fill: none;
   stroke: #fffdfd;
   stroke-width: 4;
   stroke-miterlimit: 10;
 }
-svg .st2 {
+.mepex-animado .animacion .st2 {
   fill: none;
   stroke: #ffffff;
   stroke-width: 8;
   stroke-miterlimit: 10;
 }
-svg .st3 {
+.mepex-animado .animacion .st3 {
   fill: #ffffff;
 }
-svg .st4 {
+.mepex-animado .animacion .st4 {
   font-family: "MyriadPro-Regular";
 }
-svg .st5 {
+.mepex-animado .animacion .st5 {
   font-size: 36px;
 }
-svg .svg-text {
+.mepex-animado .animacion .svg-text {
   font-family: "Noto Sans Miao";
 }
 
-.project-2 {
+.project-valyser {
   background-image: url(./static/valyser-fondo.webp);
   background-size: cover;
-  top: 0;
-  left: 50vw;
 }
-.project-2:hover {
+.project-valyser:hover {
   background: url(./static/valyser-video.webp) no-repeat;
   background-size: cover;
 }
 
-.project-3 {
+.project-indieclubargentina {
   background-image: linear-gradient(to left, rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), url(./static/indie-club-1.webp);
   background-size: 110%;
   background-position: 0% 0%;
-  top: 50vh;
-  left: 0;
   transition: all 2s;
 }
-.project-3:hover {
+.project-indieclubargentina:hover {
   background-position: 50% 10%;
 }
 
-.project-4 {
+.project-sacaloencuotas {
   background-image: url(./static/sacaloencuotas.webp);
   background-size: cover;
-  top: 50vh;
-  left: 50vw;
   overflow: hidden;
 }
-.project-4 img {
+.project-sacaloencuotas img {
   position: absolute;
   opacity: 0;
   -o-object-fit: cover;
@@ -345,7 +369,7 @@ svg .svg-text {
   left: 0;
   transition: all 1s;
 }
-.project-4:hover img {
+.project-sacaloencuotas:hover img {
   opacity: 1;
 }
 
@@ -550,11 +574,11 @@ svg .svg-text {
     align-items: center;
     justify-content: center;
   }
-  .project-1,
-  .project-3 {
+  .project-mepex,
+  .project-indieclubargentina {
     background-size: cover;
   }
-  .project-1 svg {
+  .project-mepex svg {
     top: auto;
     left: auto;
     height: 80%;
@@ -832,7 +856,7 @@ svg .svg-text {
     line-height-step: 4rem;
     font-size: 2.4rem;
   }
-  .project-1 svg {
+  .project-mepex svg {
     height: 65%;
     left: -5%;
   }
