@@ -65,7 +65,7 @@ reload.addEventListener('click', function(){
   }
   if(counter === 4){
     const message = document.createElement('p');
-    message.innerHTML = "The entire animation is made with CSS";
+    message.innerHTML = "The entire animation is made with CSS and SVG, triggered by JS";
     message.classList.add('easter-egg-2');
     mepex.querySelector('.item-text').appendChild(message);
   }

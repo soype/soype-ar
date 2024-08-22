@@ -186,7 +186,7 @@ a {
 
 .item-text {
   z-index: 2;
-  background-color: rgba(33, 33, 33, 0.75);
+  background-color: rgba(33, 33, 33, 0.85);
   padding: 1rem 2rem 1rem;
   border-radius: 2rem;
   cursor: pointer;
@@ -393,12 +393,27 @@ a {
       rgba(51, 51, 51, 0.3)
     ),
     url(./static/indie-club-1.webp);
-  background-size: 110%;
-  background-position: 0% 0%;
+  background-size: cover;
+  background-position: 50%;
   transition: all 2s;
   &:hover {
     background-position: 50% 10%;
   }
+}
+
+.project-teladochealth {
+  background-image: url(./static/teladochealth.webp);
+  background-size: cover;
+  background-position: 50%;
+  transition: all 2s;
+  &:hover {
+    background-position: 50% 10%;
+  }
+}
+
+.project-metrodetela {
+  background-image: url(./static/metrodetela.webp);
+  background-size: cover;
 }
 
 .project-sacaloencuotas {
@@ -902,6 +917,7 @@ a {
     height: 50vh;
     top: 0;
     left: 0;
+    background-size: cover;
   }
   .about {
     font-size: 2rem;
