@@ -670,22 +670,9 @@ svg {
 
   .terminal {
     margin-top: 5rem;
-    max-width: 22rem;
+    // max-width: 22rem;
     overflow-wrap: break-word;
     overflow: visible;
-  }
-  .terminal-content {
-    display: none;
-  }
-  .terminal-content-mobile {
-    display: inline;
-    max-width: 22rem;
-    overflow-wrap: normal;
-    p {
-      // opacity: 1 !important;
-
-      margin: 0 0.5rem;
-    }
   }
   .text-1 {
     animation: none;
@@ -709,6 +696,25 @@ svg {
 
   .text-6 {
     animation: none;
+  }
+}
+
+@media all and (max-width: 600px){
+  .terminal{
+    max-width: 22rem;
+  }
+  .terminal-content {
+    display: none;
+  }
+  .terminal-content-mobile {
+    display: inline;
+    max-width: 22rem;
+    overflow-wrap: normal;
+    p {
+      // opacity: 1 !important;
+
+      margin: 0 0.5rem;
+    }
   }
 }
 
