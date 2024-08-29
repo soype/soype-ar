@@ -1,0 +1,250 @@
+@import '../../styles/variables.scss';
+
+@mixin blend-hard {
+  mix-blend-mode: hard-light;
+}
+
+$bubble-size: 80%;
+
+$container-height: 100%;
+$container-width: 100%;
+
+.container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  h2{
+    width: 20rem;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 10rem);
+    color: white;
+    z-index: 99;
+  }
+}
+
+.bubble-container {
+  width: $container-width;
+  height: $container-height;
+  background-image: linear-gradient(45deg, lightblue, blue);
+  background-size: 400%;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1.2);
+
+  filter: blur(20px);
+
+  display: flex;
+  justify-content: center;
+
+  h2{
+    color: white;
+    padding: 2rem;
+    position: absolute;
+    z-index: 15;
+  }
+}
+
+.b1 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($blue, 0.8),
+      rgba($blue, 0) 30%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  transition: all 1s;
+
+  height: $bubble-size;
+  width: $bubble-size;
+  top: -5rem;
+  left: calc( calc($container-width / 2) - calc($bubble-size * .5));
+
+  transform-origin: center center;
+  animation: moveInCircleLg 7s reverse linear infinite;
+}
+
+.b2 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($purple-lt, 0.8) 0,
+      rgba($purple-lt, 0) 40%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+  top: 0;
+  left: calc($container-width / 3);
+
+  transform-origin: center center;
+  animation: moveInCircleMd 7s linear infinite;
+
+  opacity: 1;
+}
+
+.b3 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($blue-lt, 0.8) 0,
+      rgba($blue-lt, 0) 40%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+
+  top: -8rem;
+  right: calc($container-width / 3);
+
+  transform-origin: center center;
+  animation: moveInCircleMd 7s linear infinite;
+
+  opacity: 1;
+}
+
+.b4 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($red, 0.8) 0,
+      rgba($red, 0) 40%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+  top: 10rem;
+  left: calc( calc($container-width / 2) - calc($bubble-size * .5));
+
+  transform-origin: center center;
+  animation: moveInCircleSm 15s linear infinite;
+
+  opacity: .7;
+}
+
+.b5 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($yellow, 0.8) 0,
+      rgba($yellow, 0) 40%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+  bottom: 0;
+  left: calc( calc($container-width / 2) - calc($bubble-size * .8));
+
+  transform-origin: center center;
+  animation: moveInCircleLg 7s reverse linear infinite;
+
+  opacity: 1;
+}
+
+.b6{
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba($blue-lt, 0.8) 0,
+      rgba($blue-lt, 0) 40%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+  bottom: 0;
+  right: calc( calc($container-width / 2) - calc($bubble-size * .8));
+
+  transform-origin: center center;
+  animation: moveInCircleMd 7s linear infinite;
+
+  opacity: 1;
+}
+
+.interactive{
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(rgb(92, 171, 196), 0.8) 0,
+      rgba(rgb(132, 198, 219), 0) 20%
+    )
+    no-repeat;
+  @include blend-hard();
+
+  height: $bubble-size;
+  width: $bubble-size;
+  top: -50%;
+  left: -50%;
+
+  transform-origin: center center;
+  transition: transform .1s;
+
+  opacity: .7;
+}
+
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-20%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(20%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-20%) translateY(-10%);
+  }
+}
+
+@keyframes diagonalDownRight{
+  0%{
+    transform: translateX(-20%) translateY(20%);
+  }
+
+  50%{
+    transform: translateX(20%) translateY(-20%);
+  }
+
+  100%{
+    transform: translateX(-20%) translateY(20%);
+  }
+}
+
+@keyframes moveInCircleSm {
+  from {  -webkit-transform: rotate(0deg) translateX(20px) rotate(0deg); }
+  to   {  -webkit-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+@keyframes moveInCircleMd {
+  from {  -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg); }
+  to   {  -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes moveInCircleLg {
+  from {  -webkit-transform: rotate(0deg) translateX(80px) rotate(0deg); }
+  to   {  -webkit-transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
