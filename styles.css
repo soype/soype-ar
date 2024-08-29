@@ -902,7 +902,7 @@ a {
   margin-bottom: 50px;
 }
 .social a {
-  margin: 0 5rem 0;
+  padding: 5rem;
 }
 
 .empty {
@@ -916,6 +916,23 @@ a {
 
 .social {
   display: flex;
+}
+
+.github img {
+  transition: all 0.3s;
+  border-radius: 100%;
+}
+.github:hover img {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
+}
+
+.linkedin img {
+  transition: all 0.3s;
+  border-radius: 100%;
+}
+.linkedin:hover img {
+  box-shadow: 0 0 50px rgba(0, 123, 255, 0.8);
+  border-radius: 100%;
 }
 
 .bubbles-container {
@@ -933,12 +950,12 @@ a {
 }
 
 .bubble {
-  height: 250px;
-  width: 250px;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle at center, rgba(255, 193, 7, 0.8), rgba(255, 193, 7, 0) 70%) no-repeat;
+  background: radial-gradient(circle at center, rgba(255, 213, 88, 0.8), rgba(255, 213, 88, 0) 70%) no-repeat;
   mix-blend-mode: hard-light;
 }
 
