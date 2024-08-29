@@ -144,3 +144,22 @@ function calculateAge() {
 }
 
 calculateAge();
+
+// Make bubble follow cursor
+document.addEventListener('mousemove', function(event) {
+  const bubble = document.querySelector('.bubble');
+  const container = document.querySelector('.section-4'); // Select the 4th container (index 3)
+
+  if (bubble && container) {
+      const containerRect = container.getBoundingClientRect(); // Get the container's position
+
+      // Calculate the position of the bubble relative to the container
+      const bubbleX = event.clientX - containerRect.left;
+      const bubbleY = event.clientY - containerRect.top;
+
+      // Set the bubble's position within the container
+      bubble.style.position = 'absolute';
+      bubble.style.left = `${bubbleX}px`;
+      bubble.style.top = `${bubbleY}px`;
+  }
+});
