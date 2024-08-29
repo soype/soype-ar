@@ -908,6 +908,11 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+
+  .logo{
+    font-size: 1.2rem;
+  }
+
   .intro__title {
     line-height: 4rem;
     line-height-step: 4rem;
@@ -928,6 +933,10 @@ a {
   }
   .section-4 {
     height: auto;
+  }
+
+  .social a{
+    padding: 3rem !important;
   }
 }
 
