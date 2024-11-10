@@ -34,7 +34,7 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
-  // display: none !important;
+  display: none !important;
 }
 
 .loader-logo {
@@ -53,21 +53,21 @@ html {
   }
 }
 
-.main {
-  overflow-x: hidden;
-  display: block;
-  opacity: 0;
-  animation: appear 1s 4s forwards;
-  font-family: Gobold;
-}
+// .main {
+//   overflow-x: hidden;
+//   display: block;
+//   opacity: 0;
+//   // animation: appear 1s 4s forwards;
+//   font-family: Gobold;
+// }
 
 // Main sin intro
-// .main{
-//     overflow-x: hidden;
-//     display: block;
-//     opacity: 1;
-// font-family: Gobold;
-// }
+.main{
+    overflow-x: hidden;
+    display: block;
+    opacity: 1;
+font-family: Gobold;
+}
 
 .header {
   position: absolute;
@@ -161,17 +161,17 @@ a {
   }
 }
 
-// Section 2
+// Section 2 - Projects
 
-.section-2 {
-  height: 100vh;
+.projects {
+  height: 50vh;
   background-color: rgba(181, 180, 180, 0.1);
   display: grid;
   position: relative;
   text-transform: uppercase;
   font-family: Gobold;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  // grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -438,9 +438,27 @@ a {
   }
 }
 
+// Finnancial Projects 
+
+.finnancial{
+  padding: 4rem 0;
+
+  .projects{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  
+    &__item{
+      position: relative;
+    }
+  }
+}
+
 // Section 3
 
-.section-3 {
+.about {
   height: 100vh;
   background-image: url(./static/panel.jpg);
   background-size: cover;

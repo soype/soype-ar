@@ -34,6 +34,7 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
+  display: none !important;
 }
 
 .loader-logo {
@@ -54,8 +55,7 @@ html {
 .main {
   overflow-x: hidden;
   display: block;
-  opacity: 0;
-  animation: appear 1s 4s forwards;
+  opacity: 1;
   font-family: Gobold;
 }
 
@@ -147,15 +147,14 @@ a {
     opacity: 1;
   }
 }
-.section-2 {
-  height: 100vh;
+.projects {
+  height: 50vh;
   background-color: rgba(181, 180, 180, 0.1);
   display: grid;
   position: relative;
   text-transform: uppercase;
   font-family: Gobold;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -388,7 +387,21 @@ a {
   opacity: 1;
 }
 
-.section-3 {
+.finnancial {
+  padding: 4rem 0;
+}
+.finnancial .projects {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.finnancial .projects__item {
+  position: relative;
+}
+
+.about {
   height: 100vh;
   background-image: url(./static/panel.jpg);
   background-size: cover;

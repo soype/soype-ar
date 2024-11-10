@@ -5,11 +5,11 @@ function isMobileDevice() {
 const smoothScroll = (id) => {
   id.scrollIntoView();
 };
-const loader = document.getElementById("loader");
-const main = document.getElementById("main");
-setTimeout(() => {
-  loader.style.display = "none";
-}, 4000);
+// const loader = document.getElementById("loader");
+// const main = document.getElementById("main");
+// setTimeout(() => {
+//   loader.style.display = "none";
+// }, 4000);
 
 const terminal = document.getElementById('terminal');
 const mepex = document.getElementById('project-mepex');
@@ -148,7 +148,7 @@ calculateAge();
 // Make bubble follow cursor
 document.addEventListener('mousemove', function(event) {
   const bubble = document.querySelector('.bubble');
-  const container = document.querySelector('.section-4'); // Select the 4th container (index 3)
+  const container = document.querySelector('.section-5'); // Select the 4th container (index 3)
 
   if (bubble && container) {
       const containerRect = container.getBoundingClientRect(); // Get the container's position
