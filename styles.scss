@@ -441,7 +441,7 @@ a {
 
 // Section 3
 
-.section-3 {
+.about {
   height: 100vh;
   background-image: url(./static/panel.jpg);
   background-size: cover;
@@ -679,7 +679,7 @@ a {
 }
 
 @media all and (max-width: 1080px){
-  .section-3{
+  .about{
     padding: 2rem;
     flex-direction: column;
     gap: 2rem;
@@ -711,10 +711,10 @@ a {
     }
   }
 
-  .section-3 {
+  .about {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .bio {

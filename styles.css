@@ -396,7 +396,7 @@ a {
   opacity: 1;
 }
 
-.section-3 {
+.about {
   height: 100vh;
   background-image: url(./static/panel.jpg);
   background-size: cover;
@@ -592,13 +592,13 @@ a {
   }
 }
 @media all and (max-width: 1080px) {
-  .section-3 {
+  .about {
     padding: 2rem;
     flex-direction: column;
     gap: 2rem;
     justify-content: space-evenly;
   }
-  .section-3 .bio {
+  .about .bio {
     max-width: 36rem;
   }
 }
@@ -617,10 +617,10 @@ a {
     left: auto;
     height: 80%;
   }
-  .section-3 {
+  .about {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
   }
   .bio {
     max-width: 100%;
