@@ -34,7 +34,7 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
-  // display: none !important;
+  display: none !important;
 }
 
 .loader-logo {
@@ -57,17 +57,17 @@ html {
   overflow-x: hidden;
   display: block;
   opacity: 0;
-  animation: appear 1s 4s forwards;
+  // animation: appear 1s 4s forwards;
   font-family: Gobold;
 }
 
 // Main sin intro
-// .main{
-//     overflow-x: hidden;
-//     display: block;
-//     opacity: 1;
-// font-family: Gobold;
-// }
+.main{
+    overflow-x: hidden;
+    display: block;
+    opacity: 1;
+font-family: Gobold;
+}
 
 .header {
   position: absolute;
@@ -111,7 +111,7 @@ a {
 
 // Section 1
 
-.section-1 {
+.hero {
   height: 100vh;
   background-image: url(./static/intro.jpg);
   background-position: center;
@@ -132,7 +132,7 @@ a {
   background-color: rgba(181, 180, 180, 0.1);
 }
 
-.intro {
+.hero__content {
   position: absolute;
   opacity: 0;
   right: 10rem;
@@ -143,12 +143,12 @@ a {
   font-family: Gobold;
 }
 
-.intro__title {
+.hero__title {
   font-size: 4rem;
   line-height: 4rem;
 }
 
-.intro__desc {
+.hero__desc {
   font-size: 2rem;
 }
 
@@ -163,7 +163,7 @@ a {
 
 // Section 2
 
-.section-2 {
+.projects {
   height: 100vh;
   background-color: rgba(181, 180, 180, 0.1);
   display: grid;
@@ -176,7 +176,7 @@ a {
   grid-row-gap: 0px;
 }
 
-.section-2__item {
+.projects__item {
   color: white;
   display: flex;
   flex-direction: column;
@@ -189,6 +189,7 @@ a {
   background-color: rgba(33, 33, 33, 0.85);
   padding: 1rem 2rem 1rem;
   border-radius: 2rem;
+  margin: 0 2rem;
   cursor: pointer;
   &:hover {
     color: gold;
@@ -440,7 +441,7 @@ a {
 
 // Section 3
 
-.section-3 {
+.about {
   height: 100vh;
   background-image: url(./static/panel.jpg);
   background-size: cover;
@@ -678,7 +679,7 @@ a {
 }
 
 @media all and (max-width: 1080px){
-  .section-3{
+  .about{
     padding: 2rem;
     flex-direction: column;
     gap: 2rem;
@@ -710,10 +711,10 @@ a {
     }
   }
 
-  .section-3 {
+  .about {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .bio {
@@ -775,7 +776,7 @@ a {
 
 // Section 4
 
-.section-4 {
+.contact {
   height: 100vh;
   color: white;
   display: flex;
@@ -824,7 +825,7 @@ a {
 // Responsive
 
 @media screen and (max-width: 850px) {
-  .intro {
+  .hero__content {
     padding: 0;
     margin: 0;
     right: 0;
@@ -837,12 +838,12 @@ a {
   .header {
     padding: 0 1rem 0;
   }
-  body .section-2 {
+  body .projects {
     display: flex;
     flex-direction: column;
     height: 200vh;
   }
-  .section-2__item {
+  .projects__item {
     position: relative;
     width: 100%;
     height: 50vh;
@@ -862,7 +863,7 @@ a {
 
   // Contact
 
-  .contact {
+  .contact__title {
     margin: 1rem 0 1rem;
   }
   .contact-form {
@@ -931,7 +932,7 @@ a {
   .navbar__item {
     margin: 0 0.3rem 0;
   }
-  .section-4 {
+  .contact {
     height: auto;
   }
 
@@ -961,7 +962,7 @@ $bubble-size: 20rem;
 $container-width: 100%;
 $container-height: 100vh;
 
-.section-4 {
+.contact {
   overflow: hidden;
   height: 100vh;
   width: 100%;
@@ -990,7 +991,7 @@ $container-height: 100vh;
   align-items: center;
 }
 
-.contact {
+.contact__title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 6rem;
@@ -1017,7 +1018,7 @@ $container-height: 100vh;
   }
 }
 
-.contact {
+.contact__title {
   margin: 50px;
 }
 
@@ -1061,7 +1062,7 @@ $container-height: 100vh;
 }
 
 
-.contact{
+.contact__title{
   text-transform: uppercase;
 }
 

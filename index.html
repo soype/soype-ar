@@ -21,21 +21,21 @@
         </h1>
         <nav class="navbar" id="navbar">
           <!-- <p class="navbar__item" onclick="changeLanguage()">ESP</p> -->
-          <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-2'))">Projects</p>
-          <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-3'))">About</p>
+          <p class="navbar__item" onclick="smoothScroll(document.getElementById('projects'))">Projects</p>
+          <p class="navbar__item" onclick="smoothScroll(document.getElementById('about'))">About</p>
           <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-4'))">Contact</p>
         </nav>
       </header>
-      <section id="section-1" class="section-1">
+      <section class="hero">
         <div class="filter"></div>
-        <div class="intro">
-          <h2 class="intro__title" id="intro__title">You just imagine</h2>
-          <p class="intro__desc" id="intro__desc">It'll be there</p>
+        <div class="hero__content">
+          <h2 class="hero__title" id="hero__title">You just imagine</h2>
+          <p class="hero__desc" id="hero__desc">It'll be there</p>
         </div>
       </section>
 
-      <section id="section-2" class="section-2">
-        <div class="section-2__item project-sacaloencuotas" id="project-1">
+      <section id="projects" class="projects">
+        <div class="projects__item project-sacaloencuotas" id="project-1">
           <a class="item-text" href="https://sacaloencuotas.ar/" target="_blank" rel="noreferrer noopener">
             <h3>Sacalo en cuotas</h3>
             <p id="project__1-text">
@@ -44,7 +44,7 @@
             </p>
           </a>
         </div>
-        <div class="section-2__item project-metrodetela" id="project-2">
+        <div class="projects__item project-metrodetela" id="project-2">
           <a class="item-text" href="https://www.metrodetela.com" target="_blank" rel="noreferrer noopener">
             <h3>Metro de Tela</h3>
             <p id="project__2-text">
@@ -53,7 +53,7 @@
             </p>
           </a>
         </div>
-        <div class="section-2__item project-teladochealth" id="project-3">
+        <div class="projects__item project-teladochealth" id="project-3">
           <a class="item-text" href="https://www.teladochealth.com/about/our-impact/" target="_blank" rel="noreferrer noopener">
             <h3>Teladoc Health</h3>
             <p id="project__3-text">
@@ -62,7 +62,7 @@
             </p>
           </a>
         </div>
-        <div class="section-2__item project-mepex" id="project-mepex">
+        <div class="projects__item project-mepex" id="project-mepex">
           <a class="item-text" href="https://www.mepex.com.ar" target="_blank" rel="noreferrer noopener">
             <h3>MEPEX</h3>
             <p id="project__mepex-text">
@@ -192,7 +192,7 @@
             </svg>
           </button>
         </div>
-        <div class="section-2__item project-indieclubargentina" id="project-4">
+        <div class="projects__item project-indieclubargentina" id="project-indieclub">
           <a class="item-text" href="https://www.indieclubargentina.com" target="_blank" rel="noreferrer noopener">
             <h3>Indie Club Argentina</h3>
             <p id="project__3-text">
@@ -201,7 +201,7 @@
             </p>
           </a>
         </div>
-        <div class="section-2__item project-valyser" id="project-4">
+        <div class="projects__item project-valyser" id="project-valyser">
           <a class="item-text" href="https://www.valysersa.com" target="_blank" rel="noreferrer noopener">
             <h3 id="project__2-title">Valyser</h3>
             <p id="project__2-text">
@@ -211,7 +211,7 @@
           </a>
         </div>
       </section>
-      <section id="section-3" class="section-3">
+      <section id="about" class="about">
         <div class="bio">
           <h3 id="bio-title">About me</h3>
           <br />
@@ -328,7 +328,7 @@
           </a>
         </div>
       </section> -->
-      <section id="section-4" class="section-4 bubbles">
+      <section id="section-4" class="contact bubbles">
         <div class="bubbles-container">
           <span class="bubble"></span>
           <span class="b1"></span>
@@ -339,7 +339,7 @@
           <span class="b6"></span>
         </div>
         <div class="content-container">
-          <h3 class="contact" id="contact-title">In touch</h3>
+          <h3 class="contact__title" id="contact-title">In touch</h3>
           <div class="mail">
             <a href="mailto:phenestroza@gmail.com">
               <img class="mail-light" src="./static/mail-light.png" alt="" height="100px" />
@@ -357,8 +357,8 @@
         </div>
       </section>
       <footer class="footer">
-        <div class="about"></div>
-        <div class="copyright"></div>
+        <div class="footer__about"></div>
+        <div class="footer__copyright"></div>
       </footer>
     </main>
     <script src="./app.js"></script>
