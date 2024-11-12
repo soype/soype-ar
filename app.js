@@ -14,7 +14,7 @@ setTimeout(() => {
 const terminal = document.getElementById('terminal');
 const mepex = document.getElementById('project-mepex');
 const project2 = document.getElementById('project-mepex');
-const project4 = document.getElementById('project-4');
+const projectValyser = document.getElementById('project-valyser');
 
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
@@ -25,7 +25,7 @@ const inViewport = (entries, observer) => {
       if(entry.target === project2){
         mepex.classList.add('mepex-animado')
       }
-      if(entry.target === project4){
+      if(entry.target === projectValyser){
         mepex.classList.add('mepex-animado')
       }
     }
@@ -40,7 +40,7 @@ Obs.observe(terminal, obsOptions);
 if(isMobileDevice()){
   Obs.observe(project2, obsOptions);
 }else{
-  Obs.observe(project4, obsOptions)
+  Obs.observe(projectValyser, obsOptions)
 }
 
 
@@ -82,7 +82,7 @@ const changeLanguage = () => {
   const project1Text = document.getElementById('project__1-text');
   const project2Text = document.getElementById('project__2-text');
   const project3Text = document.getElementById('project__3-text');
-  const project4Text = document.getElementById('project__4-text');
+  const projectValyserText = document.getElementById('project__4-text');
   const bioTitle = document.getElementById('bio-title');
   const bioDesc = document.getElementById('bio-desc');
   const contactTitle = document.getElementById('contact-title');
@@ -96,7 +96,7 @@ const changeLanguage = () => {
     project1Text.innerHTML = "Stands y exposiciones.<br/>Desarrollo web. Tema Wordpress customizado desde cero.";
     project2Text.innerHTML = "Servicios a la industria pesada.<br/>Desarrollo web. Tema Wordpress customizado desde cero.";
     project3Text.innerHTML = "Revista musical de Argentina.<br/>Modificación al tema Zakra, PHP customizado, SASS y JS.";
-    project4Text.innerHTML = "Calculador de cuotas con interés versus inflación <br> React y SASS";
+    projectValyserText.innerHTML = "Calculador de cuotas con interés versus inflación <br> React y SASS";
     bioTitle.innerHTML = "Acerca de mi";
     bioDesc.innerHTML = "Soy un desarrollador front end con una pasión por los sitios veloces y dinámicos.<br><br>Mi objetivo es crear sitios web boutique que transmiten un mensaje a través de animaciones y un diseño responsivo, dejando una duradera impresión en cualquier posible cliente.";
     contactTitle.innerHTML = "En contacto";
@@ -111,7 +111,7 @@ const changeLanguage = () => {
     project1Text.innerHTML = "Stands and expositions. <br />Web development. Custom WordPress theme from scratch.";
     project2Text.innerHTML = "Heavy industry maintenance. <br />Web development. Custom WordPress theme from scratch.";
     project3Text.innerHTML = "Music magazine from Argentina. <br />Modified WordPress theme (Zakra), custom PHP, SASS and JS.";
-    project4Text.innerHTML = "Financial calculator for installments <br> React and SASS";
+    projectValyserText.innerHTML = "Financial calculator for installments <br> React and SASS";
     bioTitle.innerHTML = "About me";
     bioDesc.innerHTML = "I'm a front end engineer with a passion for fast-loading and dynamic websites.<br><br>Through responsive and animated design, I believe a boutique website can convey what you're all about and dazzle any potential customer.";
     contactTitle.innerHTML = "In touch";

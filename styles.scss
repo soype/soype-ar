@@ -163,7 +163,7 @@ a {
 
 // Section 2
 
-.section-2 {
+.projects {
   height: 100vh;
   background-color: rgba(181, 180, 180, 0.1);
   display: grid;
@@ -176,7 +176,7 @@ a {
   grid-row-gap: 0px;
 }
 
-.section-2__item {
+.projects__item {
   color: white;
   display: flex;
   flex-direction: column;
@@ -837,12 +837,12 @@ a {
   .header {
     padding: 0 1rem 0;
   }
-  body .section-2 {
+  body .projects {
     display: flex;
     flex-direction: column;
     height: 200vh;
   }
-  .section-2__item {
+  .projects__item {
     position: relative;
     width: 100%;
     height: 50vh;
