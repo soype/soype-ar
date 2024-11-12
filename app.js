@@ -77,8 +77,8 @@ let lang = "eng";
 
 const changeLanguage = () => {
   const navbar = document.getElementById('navbar');
-  const introTitle = document.getElementById('intro__title');
-  const introDesc = document.getElementById('intro__desc');
+  const heroTitle = document.getElementById('hero__title');
+  const heroDesc = document.getElementById('hero__desc');
   const project1Text = document.getElementById('project__1-text');
   const project2Text = document.getElementById('project__2-text');
   const project3Text = document.getElementById('project__3-text');
@@ -91,8 +91,8 @@ const changeLanguage = () => {
     navbar.children[1].innerHTML = 'Proyectos';
     navbar.children[2].innerHTML = 'Acerca de';
     navbar.children[3].innerHTML = 'Contacto';
-    introTitle.innerHTML = "Vos solo imaginá";
-    introDesc.innerHTML = "Y estará ahí";
+    heroTitle.innerHTML = "Vos solo imaginá";
+    heroDesc.innerHTML = "Y estará ahí";
     project1Text.innerHTML = "Stands y exposiciones.<br/>Desarrollo web. Tema Wordpress customizado desde cero.";
     project2Text.innerHTML = "Servicios a la industria pesada.<br/>Desarrollo web. Tema Wordpress customizado desde cero.";
     project3Text.innerHTML = "Revista musical de Argentina.<br/>Modificación al tema Zakra, PHP customizado, SASS y JS.";
@@ -106,8 +106,8 @@ const changeLanguage = () => {
     navbar.children[1].innerHTML = 'Projects';
     navbar.children[2].innerHTML = 'About';
     navbar.children[3].innerHTML = 'Contact';
-    introTitle.innerHTML = "You just imagine";
-    introDesc.innerHTML = "It'll be there";
+    heroTitle.innerHTML = "You just imagine";
+    heroDesc.innerHTML = "It'll be there";
     project1Text.innerHTML = "Stands and expositions. <br />Web development. Custom WordPress theme from scratch.";
     project2Text.innerHTML = "Heavy industry maintenance. <br />Web development. Custom WordPress theme from scratch.";
     project3Text.innerHTML = "Music magazine from Argentina. <br />Modified WordPress theme (Zakra), custom PHP, SASS and JS.";

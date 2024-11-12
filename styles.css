@@ -34,6 +34,7 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
+  display: none !important;
 }
 
 .loader-logo {
@@ -55,7 +56,13 @@ html {
   overflow-x: hidden;
   display: block;
   opacity: 0;
-  animation: appear 1s 4s forwards;
+  font-family: Gobold;
+}
+
+.main {
+  overflow-x: hidden;
+  display: block;
+  opacity: 1;
   font-family: Gobold;
 }
 
@@ -98,7 +105,7 @@ a {
   color: gold;
 }
 
-.section-1 {
+.hero {
   height: 100vh;
   background-image: url(./static/intro.jpg);
   background-position: center;
@@ -119,7 +126,7 @@ a {
   background-color: rgba(181, 180, 180, 0.1);
 }
 
-.intro {
+.hero__content {
   position: absolute;
   opacity: 0;
   right: 10rem;
@@ -130,12 +137,12 @@ a {
   font-family: Gobold;
 }
 
-.intro__title {
+.hero__title {
   font-size: 4rem;
   line-height: 4rem;
 }
 
-.intro__desc {
+.hero__desc {
   font-size: 2rem;
 }
 
