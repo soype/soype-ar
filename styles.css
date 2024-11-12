@@ -180,6 +180,7 @@ a {
   background-color: rgba(33, 33, 33, 0.85);
   padding: 1rem 2rem 1rem;
   border-radius: 2rem;
+  margin: 0 2rem;
   cursor: pointer;
 }
 .item-text:hover {
@@ -715,7 +716,7 @@ a {
 }
 
 @media screen and (max-width: 850px) {
-  .intro {
+  .hero__content {
     padding: 0;
     margin: 0;
     right: 0;
