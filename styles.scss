@@ -34,7 +34,7 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
-  display: none !important;
+  // display: none !important;
 }
 
 .loader-logo {
@@ -57,17 +57,17 @@ html {
   overflow-x: hidden;
   display: block;
   opacity: 0;
-  // animation: appear 1s 4s forwards;
+  animation: appear 1s 4s forwards;
   font-family: Gobold;
 }
 
 // Main sin intro
-.main{
-    overflow-x: hidden;
-    display: block;
-    opacity: 1;
-font-family: Gobold;
-}
+// .main{
+//     overflow-x: hidden;
+//     display: block;
+//     opacity: 1;
+// font-family: Gobold;
+// }
 
 .header {
   position: absolute;
