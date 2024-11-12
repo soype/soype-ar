@@ -148,7 +148,7 @@ calculateAge();
 // Make bubble follow cursor
 document.addEventListener('mousemove', function(event) {
   const bubble = document.querySelector('.bubble');
-  const container = document.querySelector('.section-4'); // Select the 4th container (index 3)
+  const container = document.querySelector('.contact'); // Select the 4th container (index 3)
 
   if (bubble && container) {
       const containerRect = container.getBoundingClientRect(); // Get the container's position

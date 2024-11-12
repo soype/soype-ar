@@ -776,7 +776,7 @@ a {
 
 // Section 4
 
-.section-4 {
+.contact {
   height: 100vh;
   color: white;
   display: flex;
@@ -863,7 +863,7 @@ a {
 
   // Contact
 
-  .contact {
+  .contact__title {
     margin: 1rem 0 1rem;
   }
   .contact-form {
@@ -932,7 +932,7 @@ a {
   .navbar__item {
     margin: 0 0.3rem 0;
   }
-  .section-4 {
+  .contact {
     height: auto;
   }
 
@@ -962,7 +962,7 @@ $bubble-size: 20rem;
 $container-width: 100%;
 $container-height: 100vh;
 
-.section-4 {
+.contact {
   overflow: hidden;
   height: 100vh;
   width: 100%;
@@ -991,7 +991,7 @@ $container-height: 100vh;
   align-items: center;
 }
 
-.contact {
+.contact__title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 6rem;
@@ -1018,7 +1018,7 @@ $container-height: 100vh;
   }
 }
 
-.contact {
+.contact__title {
   margin: 50px;
 }
 
@@ -1062,7 +1062,7 @@ $container-height: 100vh;
 }
 
 
-.contact{
+.contact__title{
   text-transform: uppercase;
 }
 

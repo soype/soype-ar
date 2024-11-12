@@ -666,7 +666,7 @@ a {
     margin: 0 0.5rem;
   }
 }
-.section-4 {
+.contact {
   height: 100vh;
   color: white;
   display: flex;
@@ -751,7 +751,7 @@ a {
   .social a {
     margin: 0 1rem 0;
   }
-  .contact {
+  .contact__title {
     margin: 1rem 0 1rem;
   }
   .contact-form {
@@ -819,21 +819,21 @@ a {
   .navbar__item {
     margin: 0 0.3rem 0;
   }
-  .section-4 {
+  .contact {
     height: auto;
   }
   .social a {
     padding: 3rem !important;
   }
 }
-.section-4 {
+.contact {
   overflow: hidden;
   height: 100vh;
   width: 100%;
   position: relative;
   cursor: none;
 }
-.section-4 a {
+.contact a {
   cursor: none;
 }
 
@@ -851,7 +851,7 @@ a {
   align-items: center;
 }
 
-.contact {
+.contact__title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 6rem;
@@ -883,7 +883,7 @@ a {
   outline: none;
 }
 
-.contact {
+.contact__title {
   margin: 50px;
 }
 
@@ -924,7 +924,7 @@ a {
   width: 10rem;
 }
 
-.contact {
+.contact__title {
   text-transform: uppercase;
 }
 
