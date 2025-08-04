@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>SoyPe</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <link rel="stylesheet" href="styles.css" />
     <div id="loader" class="loader">
       <h3 class="loader-logo">
         Pedro <br />
@@ -33,7 +34,52 @@
           <p class="hero__desc" id="hero__desc">It'll be there</p>
         </div>
       </section>
-
+      <section id="projects-new" class="projects">
+        <div class="projects__container flex w-full">
+          <ul class="projects__options flex flex-col justify-evenly gap-2 border-r px-8 py-4 list-none">
+            <label class="text-lg cursor-pointer hover:text-yellow-300" for="landing-pages">Marketing Websites</label>
+            <ul class="flex flex-col justify-evenly gap-4 ml-[1rem]">
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Teladoc Health</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Valyser</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">MEPEX</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Isla Studio</p>
+              </li>
+            </ul>
+            <label class="text-lg cursor-pointer hover:text-yellow-300" for="e-commerce">e-Commerce</label>
+            <ul class="flex flex-col justify-evenly gap-4 ml-[1rem]">
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Metro de Tela</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Duvet</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Liquid Detal</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Texus Textil</p>
+              </li>
+            </ul>
+            <label class="text-lg cursor-pointer hover:text-yellow-300" for="pet-projects">Apps and more</label>
+            <ul class="flex flex-col justify-evenly gap-4 ml-[1rem]">
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Sacalo en cuotas</p>
+              </li>
+              <li class="projects__option">
+                <p class="text-lg cursor-pointer hover:text-yellow-300">Hipoteca</p>
+              </li>
+            </ul>
+          </ul>
+          <div class="projects__preview"></div>
+        </div>
+      </section>
       <section id="projects" class="projects">
         <div class="projects__item project-sacaloencuotas" id="project-1">
           <a class="item-text" href="https://sacaloencuotas.ar/" target="_blank" rel="noreferrer noopener">

@@ -13,6 +13,13 @@
   src: url("./static/RobotoMono-VariableFont_wght.ttf");
 }
 
+// Tailwind overwrites
+
+.text-lg{
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +41,6 @@ html {
   animation: move-up-disappear 1s 3s forwards ease-in;
   font-family: Gobold;
   text-transform: uppercase;
-  // display: none !important;
 }
 
 .loader-logo {
@@ -61,13 +67,19 @@ html {
   font-family: Gobold;
 }
 
-// Main sin intro
-// .main{
-//     overflow-x: hidden;
-//     display: block;
-//     opacity: 1;
-// font-family: Gobold;
-// }
+
+// DEBUG
+.main{
+  display: block;
+  opacity: 1;
+  animation: none;
+}
+
+.loader{
+  display: none !important;
+}
+
+//
 
 .header {
   position: absolute;
@@ -166,14 +178,39 @@ a {
 .projects {
   height: 100vh;
   background-color: rgba(181, 180, 180, 0.1);
+  background: url(./static/dark-steel.jpg);
   display: grid;
   position: relative;
   text-transform: uppercase;
   font-family: Gobold;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(2, 1fr);
+  // grid-column-gap: 0px;
+  // grid-row-gap: 0px;
+  color: white;
+
+  &__container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__option{
+    p{
+      transition: all .3s;
+    }
+  }
+
+  &__options{
+    flex: .35
+  }
+
+  &__preview{
+    flex: 1;
+  }
 }
 
 .projects__item {
